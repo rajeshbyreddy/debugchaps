@@ -381,7 +381,7 @@ export default function Home() {
               Get Started
               <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
             </button>
-            <div className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-8 text-gray-400">
+            {/* <div className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-8 text-gray-400">
               <div className="flex items-center gap-3 hover:text-blue-400 transition-colors duration-300">
                 <FaEnvelope className="text-xl sm:text-2xl" />
                 <span className="text-base sm:text-lg">rajeshbyreddy95@gmail.com</span>
@@ -390,7 +390,7 @@ export default function Home() {
                 <FaWhatsapp className="text-xl sm:text-2xl" />
                 <span className="text-base sm:text-lg">7075979652</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -408,7 +408,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="border-t border-gray-800 pt-6 sm:pt-8">
+          {/* <div className="border-t border-gray-800 pt-6 sm:pt-8">
             <div className="flex flex-col md:flex-row justify-center items-center gap-4 sm:gap-6 text-gray-500 mb-4 sm:mb-6">
               <div className="flex items-center gap-3">
                 <FaEnvelope className="text-lg sm:text-xl" />
@@ -422,7 +422,7 @@ export default function Home() {
             <p className="text-xs sm:text-sm text-gray-600 max-w-2xl mx-auto font-inter font-normal px-4">
               Project development and implementation support for academic learning purposes.
             </p>
-          </div>
+          </div> */}
         </div>
       </footer>
     </div>

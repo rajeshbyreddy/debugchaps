@@ -335,7 +335,7 @@ export default function MLAI() {
                 Request a Project
               </button>
             </div>
-            <div className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-8 text-gray-400">
+            {/* <div className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-8 text-gray-400">
               <div className="flex items-center gap-3 hover:text-purple-400 transition-colors duration-300">
                 <FaEnvelope className="text-xl sm:text-2xl" />
                 <span className="text-base sm:text-lg">rajeshbyreddy95@gmail.com</span>
@@ -344,7 +344,7 @@ export default function MLAI() {
                 <FaWhatsapp className="text-xl sm:text-2xl" />
                 <span className="text-base sm:text-lg">7075979652</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

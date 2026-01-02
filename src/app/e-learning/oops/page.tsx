@@ -145,7 +145,7 @@ export default function OOPS() {
       <Navbar />
 
       {/* Header */}
-      <header className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white border-b border-gray-300 dark:border-gray-700 mt-16">
+      <header className=" border-gray-300 dark:border-gray-700 mt-16">
         <div className="max-w-4xl mx-auto px-2 sm:px-4 py-8">
           <h1 className="text-4xl font-bold mb-3 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
             Object-Oriented Programming Interview Questions
@@ -160,7 +160,7 @@ export default function OOPS() {
       </header>
 
       {/* Content */}
-      <main className="max-w-4xl mx-auto px-2 sm:px-4 py-8 mt-20">
+      <main className="max-w-4xl mx-auto px-2 sm:px-4 py-8 mt-0">
         <div className="space-y-8">
           {content.map((item, index) => (
             <section key={index} className={`border-b border-gray-200 dark:border-gray-700 pb-8 last:border-b-0 ${
