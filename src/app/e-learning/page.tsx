@@ -94,7 +94,7 @@ export default function ELearning() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 px-4 pt-16 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 px-2 sm:px-4 pt-16 overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
@@ -116,7 +116,7 @@ export default function ELearning() {
               </h2>
             </div>
 
-            <p className="text-lg sm:text-xl md:text-2xl mb-12 text-blue-100 max-w-4xl mx-auto leading-relaxed font-inter font-light px-4">
+            <p className="text-lg sm:text-xl md:text-2xl mb-12 text-blue-100 max-w-4xl mx-auto leading-relaxed font-inter font-light px-2 sm:px-4">
               Comprehensive interview preparation covering core computer science subjects with real-world examples and proven strategies.
             </p>
           </div>
@@ -124,7 +124,7 @@ export default function ELearning() {
       </section>
 
       {/* Subjects Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-20 px-0 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent font-playfair">
