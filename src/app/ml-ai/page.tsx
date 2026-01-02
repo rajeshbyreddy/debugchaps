@@ -15,7 +15,7 @@ export default function MLAI() {
             <div className="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-purple-600 to-purple-800 rounded-full mb-6">
               <FaBrain className="text-4xl sm:text-5xl text-white" />
             </div>
-            <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-4 sm:mb-6 bg-gradient-to-r from-white via-purple-100 to-pink-200 bg-clip-text text-transparent font-montserrat leading-tight">
+            <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-4 sm:mb-6 text-white bg-clip-text text-transparent font-montserrat leading-tight">
               ML/AI Solutions
             </h1>
             <div className="mb-4 sm:mb-6">
@@ -36,7 +36,7 @@ export default function MLAI() {
                 <FaBrain className="group-hover:rotate-12 transition-transform duration-300" />
                 Request a Project
               </button>
-              <button className="w-full sm:w-auto group border-2 border-gray-400 hover:border-purple-400 text-gray-300 hover:text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 font-poppins text-sm sm:text-base">
+              <button className="w-full sm:w-auto group border-2 border-gray-400 hover:border-purple-400 text-gray-300 hover:text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-black/5 hover:bg-black/10 font-poppins text-sm sm:text-base">
                 <span className="flex items-center justify-center gap-2">
                   View Portfolio
                   <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
@@ -46,8 +46,8 @@ export default function MLAI() {
           </div>
         </div>
         <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-gray-400 rounded-full flex justify-center">
-            <div className="w-1 h-2 sm:w-1 sm:h-3 bg-gray-400 rounded-full mt-1 sm:mt-2 animate-pulse"></div>
+          <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-gray-600 rounded-full flex justify-center">
+            <div className="w-1 h-2 sm:w-1 sm:h-3 bg-gray-600 rounded-full mt-1 sm:mt-2 animate-pulse"></div>
           </div>
         </div>
       </section>
@@ -58,7 +58,7 @@ export default function MLAI() {
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-montserrat px-2">What We Build</h2>
-            <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto font-poppins font-light px-4">Advanced AI and machine learning solutions for modern business challenges</p>
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto font-poppins font-light px-4">Advanced AI and machine learning solutions for modern business challenges</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -261,25 +261,25 @@ export default function MLAI() {
               <div>
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-montserrat">Who It's For</h2>
                 <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/20">
-                    <div className="w-3 h-3 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/20 hover:border-purple-500/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 group">
+                    <div className="w-3 h-3 bg-purple-400 rounded-full mt-2 flex-shrink-0 group-hover:animate-ping"></div>
                     <div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-white font-playfair mb-2">Data-Driven Companies</h3>
-                      <p className="text-gray-300 font-inter font-normal text-sm sm:text-base">Leverage AI to extract insights from your data and make smarter business decisions.</p>
+                      <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-purple-300 font-playfair mb-2 transition-colors duration-300">Data-Driven Companies</h3>
+                      <p className="text-gray-300 group-hover:text-gray-200 font-inter font-normal text-sm sm:text-base transition-colors duration-300">Leverage AI to extract insights from your data and make smarter business decisions.</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-pink-900/20 to-blue-900/20 border border-pink-500/20">
-                    <div className="w-3 h-3 bg-pink-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-pink-900/20 to-blue-900/20 border border-pink-500/20 hover:border-pink-500/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10 group">
+                    <div className="w-3 h-3 bg-pink-400 rounded-full mt-2 flex-shrink-0 group-hover:animate-ping"></div>
                     <div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-white font-playfair mb-2">Tech Startups</h3>
-                      <p className="text-gray-300 font-inter font-normal text-sm sm:text-base">Build AI-powered products that solve real problems and scale rapidly.</p>
+                      <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-pink-300 font-playfair mb-2 transition-colors duration-300">Tech Startups</h3>
+                      <p className="text-gray-300 group-hover:text-gray-200 font-inter font-normal text-sm sm:text-base transition-colors duration-300">Build AI-powered products that solve real problems and scale rapidly.</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-blue-900/20 to-green-900/20 border border-blue-500/20">
-                    <div className="w-3 h-3 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-blue-900/20 to-green-900/20 border border-blue-500/20 hover:border-blue-500/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 group">
+                    <div className="w-3 h-3 bg-blue-400 rounded-full mt-2 flex-shrink-0 group-hover:animate-ping"></div>
                     <div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-white font-playfair mb-2">Enterprises</h3>
-                      <p className="text-gray-300 font-inter font-normal text-sm sm:text-base">Automate complex processes and gain competitive advantages with AI solutions.</p>
+                      <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-blue-300 font-playfair mb-2 transition-colors duration-300">Enterprises</h3>
+                      <p className="text-gray-300 group-hover:text-gray-200 font-inter font-normal text-sm sm:text-base transition-colors duration-300">Automate complex processes and gain competitive advantages with AI solutions.</p>
                     </div>
                   </div>
                 </div>
@@ -289,26 +289,36 @@ export default function MLAI() {
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-montserrat">Timeline</h2>
-                <div className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-800 rounded-full flex items-center justify-center text-white font-bold">1</div>
-                    <div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-white font-playfair">Week 1-2: Data Assessment & Planning</h3>
-                      <p className="text-gray-300 font-inter font-normal text-sm sm:text-base">Data analysis, problem definition, and AI solution architecture design.</p>
+                <div className="space-y-6 relative">
+                  {/* Timeline line */}
+                  <div className="absolute left-6 top-6 bottom-6 w-1 bg-gradient-to-b from-purple-500 via-pink-500 to-blue-500 rounded-full shadow-lg shadow-purple-500/20">
+                    <div className="absolute inset-0 bg-gradient-to-b from-purple-500/50 via-pink-500/50 to-blue-500/50 rounded-full animate-pulse"></div>
+                  </div>
+                  <div className="flex items-center gap-4 group">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-800 rounded-full flex items-center justify-center text-white font-bold shadow-2xl shadow-purple-500/40 ring-4 ring-purple-500/20 group-hover:ring-purple-500/40 transition-all duration-500 group-hover:scale-110">
+                      <span className="group-hover:animate-bounce">1</span>
+                    </div>
+                    <div className="flex-1 group-hover:translate-x-2 transition-transform duration-300">
+                      <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-purple-300 font-playfair transition-colors duration-300">Week 1-2: Data Assessment & Planning</h3>
+                      <p className="text-gray-300 group-hover:text-gray-200 font-inter font-normal text-sm sm:text-base transition-colors duration-300">Data analysis, problem definition, and AI solution architecture design.</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-pink-600 to-pink-800 rounded-full flex items-center justify-center text-white font-bold">2</div>
-                    <div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-white font-playfair">Week 3-8: Model Development</h3>
-                      <p className="text-gray-300 font-inter font-normal text-sm sm:text-base">Data preprocessing, model training, and iterative optimization.</p>
+                  <div className="flex items-center gap-4 group">
+                    <div className="w-12 h-12 bg-gradient-to-br from-pink-600 to-pink-800 rounded-full flex items-center justify-center text-white font-bold shadow-2xl shadow-pink-500/40 ring-4 ring-pink-500/20 group-hover:ring-pink-500/40 transition-all duration-500 group-hover:scale-110">
+                      <span className="group-hover:animate-bounce">2</span>
+                    </div>
+                    <div className="flex-1 group-hover:translate-x-2 transition-transform duration-300">
+                      <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-pink-300 font-playfair transition-colors duration-300">Week 3-8: Model Development</h3>
+                      <p className="text-gray-300 group-hover:text-gray-200 font-inter font-normal text-sm sm:text-base transition-colors duration-300">Data preprocessing, model training, and iterative optimization.</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center text-white font-bold">3</div>
-                    <div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-white font-playfair">Week 9-10: Integration & Deployment</h3>
-                      <p className="text-gray-300 font-inter font-normal text-sm sm:text-base">System integration, testing, deployment, and performance monitoring.</p>
+                  <div className="flex items-center gap-4 group">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center text-white font-bold shadow-2xl shadow-blue-500/40 ring-4 ring-blue-500/20 group-hover:ring-blue-500/40 transition-all duration-500 group-hover:scale-110">
+                      <span className="group-hover:animate-bounce">3</span>
+                    </div>
+                    <div className="flex-1 group-hover:translate-x-2 transition-transform duration-300">
+                      <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-blue-300 font-playfair transition-colors duration-300">Week 9-10: Integration & Deployment</h3>
+                      <p className="text-gray-300 group-hover:text-gray-200 font-inter font-normal text-sm sm:text-base transition-colors duration-300">System integration, testing, deployment, and performance monitoring.</p>
                     </div>
                   </div>
                 </div>

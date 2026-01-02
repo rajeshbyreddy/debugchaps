@@ -47,11 +47,11 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50 text-black dark:bg-black dark:text-white overflow-x-hidden">
+    <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <Navbar />
 
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center bg-gray-50 px-4 dark:bg-black">
+      <section id="home" className="relative min-h-screen flex items-center justify-center bg-black px-4">
         <div className="absolute inset-0 bg-linear-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-purple-900/20 to-transparent"></div>
         <div className="relative z-10 text-center max-w-6xl mx-auto w-full">
@@ -77,7 +77,7 @@ export default function Home() {
                 <FaRocket className="group-hover:rotate-12 transition-transform duration-300" />
                 Request a Project
               </button>
-              <button className="w-full sm:w-auto group border-2 border-gray-400 hover:border-blue-400 text-gray-300 hover:text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 font-poppins text-sm sm:text-base">
+              <button className="w-full sm:w-auto group border-2 border-gray-400 hover:border-blue-400 text-gray-300 hover:text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-black/5 hover:bg-black/10 font-poppins text-sm sm:text-base">
                 <span className="flex items-center justify-center gap-2">
                   Contact Us
                   <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
@@ -90,28 +90,28 @@ export default function Home() {
           </div>
         </div>
         <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-gray-400 rounded-full flex justify-center">
-            <div className="w-1 h-2 sm:w-1 sm:h-3 bg-gray-400 rounded-full mt-1 sm:mt-2 animate-pulse"></div>
+          <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-gray-600 rounded-full flex justify-center">
+            <div className="w-1 h-2 sm:w-1 sm:h-3 bg-gray-600 rounded-full mt-1 sm:mt-2 animate-pulse"></div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 relative">
-        <div className="absolute inset-0 bg-linear-to-b from-transparent via-gray-900/50 dark:via-gray-900/50 to-transparent"></div>
+      <section id="services" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-gray-900 relative">
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-gray-900/50"></div>
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-playfair px-2">Our Services</h2>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent font-playfair px-2">Our Services</h2>
             <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto font-inter font-light px-4">Comprehensive development solutions tailored to your needs</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            <Link href="/web-development" className="group bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-blue-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 backdrop-blur-sm">
+            <Link href="/web-development" className="group bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 backdrop-blur-sm">
               <div className="bg-blue-500/10 p-3 sm:p-4 rounded-xl w-fit mb-4 sm:mb-6 group-hover:bg-blue-500/20 transition-colors duration-300">
                 <FaCode className="text-3xl sm:text-4xl text-blue-400 group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-black dark:text-white group-hover:text-blue-300 transition-colors duration-300 font-montserrat">Web Application Development</h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base mb-4">Modern, responsive web applications built with cutting-edge technologies and best practices.</p>
-              <div className="flex items-center text-blue-600 dark:text-blue-400 group-hover:text-blue-300 transition-colors duration-300 font-inter font-medium text-sm">
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-blue-300 transition-colors duration-300 font-montserrat">Web Application Development</h3>
+              <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base mb-4">Modern, responsive web applications built with cutting-edge technologies and best practices.</p>
+              <div className="flex items-center text-blue-600 group-hover:text-blue-300 transition-colors duration-300 font-inter font-medium text-sm">
                 Learn More
                 <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
               </div>
@@ -122,7 +122,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-green-300 transition-colors duration-300 font-montserrat">Mobile Application Development</h3>
               <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base mb-4">Cross-platform mobile apps for iOS and Android using React Native and modern frameworks.</p>
-              <div className="flex items-center text-green-400 group-hover:text-green-300 transition-colors duration-300 font-inter font-medium text-sm">
+              <div className="flex items-center text-green-600 group-hover:text-green-300 transition-colors duration-300 font-inter font-medium text-sm">
                 Learn More
                 <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
               </div>
@@ -133,7 +133,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-purple-300 transition-colors duration-300 font-montserrat">Machine Learning Solutions</h3>
               <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base mb-4">AI-powered solutions for data analysis, prediction, and intelligent automation systems.</p>
-              <div className="flex items-center text-purple-400 group-hover:text-purple-300 transition-colors duration-300 font-inter font-medium text-sm">
+              <div className="flex items-center text-purple-600 group-hover:text-purple-300 transition-colors duration-300 font-inter font-medium text-sm">
                 Learn More
                 <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
               </div>
@@ -144,7 +144,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-yellow-300 transition-colors duration-300 font-montserrat">Academic Project Development</h3>
               <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base mb-4">Comprehensive support for academic projects and research implementations with guidance.</p>
-              <div className="flex items-center text-yellow-400 group-hover:text-yellow-300 transition-colors duration-300 font-inter font-medium text-sm">
+              <div className="flex items-center text-yellow-600 group-hover:text-yellow-300 transition-colors duration-300 font-inter font-medium text-sm">
                 Learn More
                 <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
               </div>
@@ -154,7 +154,7 @@ export default function Home() {
       </section>
 
       {/* How We Work Section */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-purple-900/20"></div>
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
@@ -163,46 +163,48 @@ export default function Home() {
           </div>
           <div className="relative">
             {/* Timeline line - hidden on mobile, visible on larger screens */}
-            <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 rounded-full"></div>
+            <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 h-full w-2 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 rounded-full shadow-lg shadow-blue-500/20">
+              <div className="absolute inset-0 bg-gradient-to-b from-blue-500/50 via-purple-500/50 to-pink-500/50 rounded-full animate-pulse"></div>
+            </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 sm:gap-12">
               <div className="relative group">
-                <div className="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bg-gradient-to-br from-blue-600 to-blue-800 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold text-white shadow-2xl shadow-blue-500/30 group-hover:scale-110 transition-transform duration-300 mx-auto lg:mx-0 mb-4 lg:mb-0">
-                  1
+                <div className="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bg-gradient-to-br from-blue-600 to-blue-800 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold text-white shadow-2xl shadow-blue-500/40 group-hover:scale-110 transition-all duration-500 mx-auto lg:mx-0 mb-4 lg:mb-0 ring-4 ring-blue-500/20 group-hover:ring-blue-500/40">
+                  <span className="group-hover:animate-bounce">1</span>
                 </div>
-                <div className="mt-4 lg:mt-24 bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
-                  <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-white font-playfair text-center lg:text-left">Requirement Discussion</h3>
-                  <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base text-center lg:text-left">We start by understanding your project requirements, goals, and vision in detail through comprehensive discussions.</p>
-                </div>
-              </div>
-
-              <div className="relative group">
-                <div className="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bg-gradient-to-br from-purple-600 to-purple-800 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold text-white shadow-2xl shadow-purple-500/30 group-hover:scale-110 transition-transform duration-300 mx-auto lg:mx-0 mb-4 lg:mb-0">
-                  2
-                </div>
-                <div className="mt-4 lg:mt-24 bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
-                  <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-white font-playfair text-center lg:text-left">Planning & Architecture</h3>
-                  <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base text-center lg:text-left">Design scalable architecture, create detailed project roadmap, and establish technical specifications.</p>
+                <div className="mt-4 lg:mt-24 bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 backdrop-blur-sm group-hover:bg-gradient-to-br group-hover:from-blue-900/10 group-hover:to-purple-900/10">
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-blue-300 font-playfair text-center lg:text-left transition-colors duration-300">Requirement Discussion</h3>
+                  <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base text-center lg:text-left group-hover:text-gray-300 transition-colors duration-300">We start by understanding your project requirements, goals, and vision in detail through comprehensive discussions.</p>
                 </div>
               </div>
 
               <div className="relative group">
-                <div className="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bg-gradient-to-br from-pink-600 to-pink-800 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold text-white shadow-2xl shadow-pink-500/30 group-hover:scale-110 transition-transform duration-300 mx-auto lg:mx-0 mb-4 lg:mb-0">
-                  3
+                <div className="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bg-gradient-to-br from-purple-600 to-purple-800 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold text-white shadow-2xl shadow-purple-500/40 group-hover:scale-110 transition-all duration-500 mx-auto lg:mx-0 mb-4 lg:mb-0 ring-4 ring-purple-500/20 group-hover:ring-purple-500/40">
+                  <span className="group-hover:animate-bounce">2</span>
                 </div>
-                <div className="mt-4 lg:mt-24 bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-pink-500/50 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
-                  <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-white font-playfair text-center lg:text-left">Development & Testing</h3>
-                  <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base text-center lg:text-left">Agile development with continuous integration, testing, and quality assurance throughout the process.</p>
+                <div className="mt-4 lg:mt-24 bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-purple-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 backdrop-blur-sm group-hover:bg-gradient-to-br group-hover:from-purple-900/10 group-hover:to-pink-900/10">
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-purple-300 font-playfair text-center lg:text-left transition-colors duration-300">Planning & Architecture</h3>
+                  <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base text-center lg:text-left group-hover:text-gray-300 transition-colors duration-300">Design scalable architecture, create detailed project roadmap, and establish technical specifications.</p>
                 </div>
               </div>
 
               <div className="relative group">
-                <div className="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bg-gradient-to-br from-green-600 to-green-800 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold text-white shadow-2xl shadow-green-500/30 group-hover:scale-110 transition-transform duration-300 mx-auto lg:mx-0 mb-4 lg:mb-0">
-                  4
+                <div className="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bg-gradient-to-br from-pink-600 to-pink-800 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold text-white shadow-2xl shadow-pink-500/40 group-hover:scale-110 transition-all duration-500 mx-auto lg:mx-0 mb-4 lg:mb-0 ring-4 ring-pink-500/20 group-hover:ring-pink-500/40">
+                  <span className="group-hover:animate-bounce">3</span>
                 </div>
-                <div className="mt-4 lg:mt-24 bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-green-500/50 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
-                  <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-white font-playfair text-center lg:text-left">Delivery & Deployment Support</h3>
-                  <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base text-center lg:text-left">Seamless deployment, comprehensive testing, and ongoing support for your production application.</p>
+                <div className="mt-4 lg:mt-24 bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-pink-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10 backdrop-blur-sm group-hover:bg-gradient-to-br group-hover:from-pink-900/10 group-hover:to-purple-900/10">
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-pink-300 font-playfair text-center lg:text-left transition-colors duration-300">Development & Testing</h3>
+                  <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base text-center lg:text-left group-hover:text-gray-300 transition-colors duration-300">Agile development with continuous integration, testing, and quality assurance throughout the process.</p>
+                </div>
+              </div>
+
+              <div className="relative group">
+                <div className="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bg-gradient-to-br from-green-600 to-green-800 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold text-white shadow-2xl shadow-green-500/40 group-hover:scale-110 transition-all duration-500 mx-auto lg:mx-0 mb-4 lg:mb-0 ring-4 ring-green-500/20 group-hover:ring-green-500/40">
+                  <span className="group-hover:animate-bounce">4</span>
+                </div>
+                <div className="mt-4 lg:mt-24 bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-green-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10 backdrop-blur-sm group-hover:bg-gradient-to-br group-hover:from-green-900/10 group-hover:to-blue-900/10">
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-green-300 font-playfair text-center lg:text-left transition-colors duration-300">Delivery & Deployment Support</h3>
+                  <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base text-center lg:text-left group-hover:text-gray-300 transition-colors duration-300">Seamless deployment, comprehensive testing, and ongoing support for your production application.</p>
                 </div>
               </div>
             </div>

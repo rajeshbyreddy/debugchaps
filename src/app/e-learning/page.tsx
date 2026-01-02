@@ -90,7 +90,7 @@ export default function ELearning() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 text-black dark:bg-black dark:text-white overflow-x-hidden">
+    <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <Navbar />
 
       {/* Hero Section */}
@@ -124,13 +124,13 @@ export default function ELearning() {
       </section>
 
       {/* Subjects Grid */}
-      <section className="py-20 px-0 sm:px-6 lg:px-8 relative">
+      <section className="py-20 px-0 sm:px-6 lg:px-8 bg-black relative">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent font-playfair">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-playfair">
               Computer Science Subjects
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto font-inter">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto font-inter">
               Explore comprehensive Q&A guides for core computer science subjects to prepare for technical interviews.
             </p>
           </div>
@@ -141,7 +141,7 @@ export default function ELearning() {
               return (
                 <div
                   key={subject.id}
-                  className="group bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 border border-gray-100 dark:border-gray-700 overflow-hidden relative"
+                  className="group bg-gray-900 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 border border-gray-700 overflow-hidden relative"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {/* Background Pattern */}
@@ -152,25 +152,25 @@ export default function ELearning() {
                       <IconComponent className="text-2xl text-white" />
                     </div>
 
-                    <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors">
                       {subject.title}
                     </h3>
 
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed font-inter mb-6 text-sm">
+                    <p className="text-gray-300 leading-relaxed font-inter mb-6 text-sm">
                       {subject.description}
                     </p>
 
                     {/* Topics Preview */}
                     <div className="mb-6">
-                      <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Key Topics:</h4>
+                      <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Topics:</h4>
                       <div className="flex flex-wrap gap-2">
                         {subject.topics.slice(0, 3).map((topic, i) => (
-                          <span key={i} className="text-xs bg-blue-50 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full">
+                          <span key={i} className="text-xs bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">
                             {topic}
                           </span>
                         ))}
                         {subject.topics.length > 3 && (
-                          <span className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 px-3 py-1 rounded-full">
+                          <span className="text-xs bg-gray-700 text-gray-400 px-3 py-1 rounded-full">
                             +{subject.topics.length - 3} more
                           </span>
                         )}
@@ -193,13 +193,13 @@ export default function ELearning() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
               Why This Resource?
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Designed specifically for interview preparation with comprehensive coverage of essential topics.
             </p>
           </div>
@@ -209,8 +209,8 @@ export default function ELearning() {
               <div className="bg-gradient-to-br from-blue-500 to-blue-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                 <FaQuestionCircle className="text-3xl text-white" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Comprehensive Coverage</h3>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+              <h3 className="text-2xl font-bold mb-4 text-white">Comprehensive Coverage</h3>
+              <p className="text-gray-300 leading-relaxed">
                 Detailed Q&A format covering all essential topics for technical interviews at top tech companies.
               </p>
             </div>
@@ -219,8 +219,8 @@ export default function ELearning() {
               <div className="bg-gradient-to-br from-green-500 to-green-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                 <FaLightbulb className="text-3xl text-white" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Clear Explanations</h3>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+              <h3 className="text-2xl font-bold mb-4 text-white">Clear Explanations</h3>
+              <p className="text-gray-300 leading-relaxed">
                 Simple, easy-to-understand explanations with practical examples to reinforce your understanding.
               </p>
             </div>
@@ -229,8 +229,8 @@ export default function ELearning() {
               <div className="bg-gradient-to-br from-purple-500 to-purple-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                 <FaRocket className="text-3xl text-white" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Interview Ready</h3>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+              <h3 className="text-2xl font-bold mb-4 text-white">Interview Ready</h3>
+              <p className="text-gray-300 leading-relaxed">
                 Structured content designed to help you confidently answer technical questions in interviews.
               </p>
             </div>

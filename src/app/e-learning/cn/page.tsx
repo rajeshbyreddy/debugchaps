@@ -131,11 +131,11 @@ export default function CN() {
   ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white">
+    <div className="min-h-screen bg-black text-white">
       <Navbar />
 
       {/* Header */}
-      <header className=" border-gray-300 dark:border-gray-700 mt-16">
+      <header className="border-gray-700 mt-16">
         <div className="max-w-4xl mx-auto px-2 sm:px-4 py-8">
           <h1 className="text-4xl font-bold mb-3 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
             Computer Networks Interview Questions
@@ -150,24 +150,22 @@ export default function CN() {
       </header>
 
       {/* Content */}
-      <main className="max-w-4xl mx-auto px-2 sm:px-4 py-8 mt-20">
+      <main className="max-w-4xl mx-auto px-2 sm:px-4 py-8 mt-0">
         <div className="space-y-8">
           {content.map((item, index) => (
-            <section key={index} className={`border-b border-gray-200 dark:border-gray-700 pb-8 last:border-b-0 ${
-              index % 2 === 0 ? 'bg-white dark:bg-gray-900' : 'bg-gray-50 dark:bg-gray-800'
-            } p-6 rounded-lg shadow-sm`}>
+            <section key={index} className="border-b border-gray-700 pb-8 last:border-b-0 bg-gray-900 p-6 rounded-lg shadow-sm">
               <h2 className="text-xl font-semibold mb-4 text-white bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-3 rounded-lg shadow-md">
                 {index + 1}. {item.question}
               </h2>
 
-              <div className="text-gray-700 dark:text-gray-300 leading-relaxed bg-white dark:bg-gray-700 p-6 rounded-lg border-l-4 border-blue-500 shadow-sm">
+              <div className="text-gray-300 leading-relaxed bg-gray-800 p-6 rounded-lg border-l-4 border-blue-500 shadow-sm">
                 {item.answer.split('\n').map((line, i) => {
                   // Highlight important terms with different colors
                   const highlightedLine = line
-                    .replace(/\b(OSI Model|TCP\/IP|HTTP|HTTPS|TCP|UDP|DNS|DHCP|NAT|ARP|ICMP|VPN|Firewall|CDN|Ethernet|WiFi|IPv4|IPv6|MAC Address|IP Address|Routing|Switching|Load Balancing|Bandwidth|Latency|Throughput|Subnetting)\b/g, '<span class="bg-blue-200 dark:bg-blue-800 text-blue-900 dark:text-blue-100 px-2 py-1 rounded font-semibold">$1</span>')
-                    .replace(/\b(\d+(?:\.\d+)?%|\d+ (Mbps|Gbps|ms|GHz))\b/g, '<span class="bg-green-200 dark:bg-green-800 text-green-900 dark:text-green-100 px-2 py-1 rounded font-semibold">$1</span>')
-                    .replace(/\b(Real Example|Example)\b/g, '<span class="bg-purple-200 dark:bg-purple-800 text-purple-900 dark:text-purple-100 px-2 py-1 rounded font-semibold">$1</span>')
-                    .replace(/•/g, '<span class="text-blue-600 dark:text-blue-400 font-bold">•</span>');
+                    .replace(/\b(OSI Model|TCP\/IP|HTTP|HTTPS|TCP|UDP|DNS|DHCP|NAT|ARP|ICMP|VPN|Firewall|CDN|Ethernet|WiFi|IPv4|IPv6|MAC Address|IP Address|Routing|Switching|Load Balancing|Bandwidth|Latency|Throughput|Subnetting)\b/g, '<span class="bg-blue-800 text-blue-100 px-2 py-1 rounded font-semibold">$1</span>')
+                    .replace(/\b(\d+(?:\.\d+)?%|\d+ (Mbps|Gbps|ms|GHz))\b/g, '<span class="bg-green-800 text-green-100 px-2 py-1 rounded font-semibold">$1</span>')
+                    .replace(/\b(Real Example|Example)\b/g, '<span class="bg-purple-800 text-purple-100 px-2 py-1 rounded font-semibold">$1</span>')
+                    .replace(/•/g, '<span class="text-blue-400 font-bold">•</span>');
 
                   return (
                     <p key={i} className="mb-4" dangerouslySetInnerHTML={{ __html: highlightedLine }} />

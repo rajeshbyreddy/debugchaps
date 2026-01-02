@@ -36,7 +36,7 @@ export default function MobileDevelopment() {
                 <FaMobileAlt className="group-hover:rotate-12 transition-transform duration-300" />
                 Request a Project
               </button>
-              <button className="w-full sm:w-auto group border-2 border-gray-400 hover:border-green-400 text-gray-300 hover:text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 font-poppins text-sm sm:text-base">
+              <button className="w-full sm:w-auto group border-2 border-gray-400 hover:border-green-400 text-gray-300 hover:text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-black/5 hover:bg-black/10 font-poppins text-sm sm:text-base">
                 <span className="flex items-center justify-center gap-2">
                   View Portfolio
                   <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
@@ -46,8 +46,8 @@ export default function MobileDevelopment() {
           </div>
         </div>
         <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-gray-400 rounded-full flex justify-center">
-            <div className="w-1 h-2 sm:w-1 sm:h-3 bg-gray-400 rounded-full mt-1 sm:mt-2 animate-pulse"></div>
+          <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-gray-600 rounded-full flex justify-center">
+            <div className="w-1 h-2 sm:w-1 sm:h-3 bg-gray-600 rounded-full mt-1 sm:mt-2 animate-pulse"></div>
           </div>
         </div>
       </section>

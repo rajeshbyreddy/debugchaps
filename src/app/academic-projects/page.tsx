@@ -36,7 +36,7 @@ export default function AcademicProjects() {
                 <FaGraduationCap className="group-hover:rotate-12 transition-transform duration-300" />
                 Request a Project
               </button>
-              <button className="w-full sm:w-auto group border-2 border-gray-400 hover:border-cyan-400 text-gray-300 hover:text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 font-poppins text-sm sm:text-base">
+              <button className="w-full sm:w-auto group border-2 border-gray-400 hover:border-cyan-400 text-gray-300 hover:text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-black/5 hover:bg-black/10 font-poppins text-sm sm:text-base">
                 <span className="flex items-center justify-center gap-2">
                   View Portfolio
                   <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
@@ -46,8 +46,8 @@ export default function AcademicProjects() {
           </div>
         </div>
         <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-gray-400 rounded-full flex justify-center">
-            <div className="w-1 h-2 sm:w-1 sm:h-3 bg-gray-400 rounded-full mt-1 sm:mt-2 animate-pulse"></div>
+          <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-gray-600 rounded-full flex justify-center">
+            <div className="w-1 h-2 sm:w-1 sm:h-3 bg-gray-600 rounded-full mt-1 sm:mt-2 animate-pulse"></div>
           </div>
         </div>
       </section>
@@ -261,25 +261,25 @@ export default function AcademicProjects() {
               <div>
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-montserrat">Who It's For</h2>
                 <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-500/20">
-                    <div className="w-3 h-3 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-500/20 hover:border-cyan-500/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 group">
+                    <div className="w-3 h-3 bg-cyan-400 rounded-full mt-2 flex-shrink-0 group-hover:animate-ping"></div>
                     <div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-white font-playfair mb-2">Undergraduate Students</h3>
-                      <p className="text-gray-300 font-inter font-normal text-sm sm:text-base">Build impressive capstone projects and portfolio pieces that showcase your skills.</p>
+                      <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-cyan-300 font-playfair mb-2 transition-colors duration-300">Undergraduate Students</h3>
+                      <p className="text-gray-300 group-hover:text-gray-200 font-inter font-normal text-sm sm:text-base transition-colors duration-300">Build impressive capstone projects and portfolio pieces that showcase your skills.</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-blue-900/20 to-indigo-900/20 border border-blue-500/20">
-                    <div className="w-3 h-3 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-blue-900/20 to-indigo-900/20 border border-blue-500/20 hover:border-blue-500/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 group">
+                    <div className="w-3 h-3 bg-blue-400 rounded-full mt-2 flex-shrink-0 group-hover:animate-ping"></div>
                     <div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-white font-playfair mb-2">Graduate Students</h3>
-                      <p className="text-gray-300 font-inter font-normal text-sm sm:text-base">Develop sophisticated research software and thesis implementations.</p>
+                      <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-blue-300 font-playfair mb-2 transition-colors duration-300">Graduate Students</h3>
+                      <p className="text-gray-300 group-hover:text-gray-200 font-inter font-normal text-sm sm:text-base transition-colors duration-300">Develop sophisticated research software and thesis implementations.</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-indigo-900/20 to-purple-900/20 border border-indigo-500/20">
-                    <div className="w-3 h-3 bg-indigo-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-indigo-900/20 to-purple-900/20 border border-indigo-500/20 hover:border-indigo-500/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/10 group">
+                    <div className="w-3 h-3 bg-indigo-400 rounded-full mt-2 flex-shrink-0 group-hover:animate-ping"></div>
                     <div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-white font-playfair mb-2">Researchers & Professors</h3>
-                      <p className="text-gray-300 font-inter font-normal text-sm sm:text-base">Create tools that advance your research and support academic collaboration.</p>
+                      <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-indigo-300 font-playfair mb-2 transition-colors duration-300">Researchers & Professors</h3>
+                      <p className="text-gray-300 group-hover:text-gray-200 font-inter font-normal text-sm sm:text-base transition-colors duration-300">Create tools that advance your research and support academic collaboration.</p>
                     </div>
                   </div>
                 </div>
@@ -289,26 +289,36 @@ export default function AcademicProjects() {
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-montserrat">Timeline</h2>
-                <div className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-600 to-cyan-800 rounded-full flex items-center justify-center text-white font-bold">1</div>
-                    <div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-white font-playfair">Week 1-2: Requirements & Planning</h3>
-                      <p className="text-gray-300 font-inter font-normal text-sm sm:text-base">Academic requirements analysis, project scope definition, and technical planning.</p>
+                <div className="space-y-6 relative">
+                  {/* Timeline line */}
+                  <div className="absolute left-6 top-6 bottom-6 w-1 bg-gradient-to-b from-cyan-500 via-blue-500 to-indigo-500 rounded-full shadow-lg shadow-cyan-500/20">
+                    <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/50 via-blue-500/50 to-indigo-500/50 rounded-full animate-pulse"></div>
+                  </div>
+                  <div className="flex items-center gap-4 group">
+                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-600 to-cyan-800 rounded-full flex items-center justify-center text-white font-bold shadow-2xl shadow-cyan-500/40 ring-4 ring-cyan-500/20 group-hover:ring-cyan-500/40 transition-all duration-500 group-hover:scale-110">
+                      <span className="group-hover:animate-bounce">1</span>
+                    </div>
+                    <div className="flex-1 group-hover:translate-x-2 transition-transform duration-300">
+                      <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-cyan-300 font-playfair transition-colors duration-300">Week 1-2: Requirements & Planning</h3>
+                      <p className="text-gray-300 group-hover:text-gray-200 font-inter font-normal text-sm sm:text-base transition-colors duration-300">Academic requirements analysis, project scope definition, and technical planning.</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center text-white font-bold">2</div>
-                    <div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-white font-playfair">Week 3-6: Development & Testing</h3>
-                      <p className="text-gray-300 font-inter font-normal text-sm sm:text-base">Implementation with regular check-ins, testing, and academic feedback integration.</p>
+                  <div className="flex items-center gap-4 group">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center text-white font-bold shadow-2xl shadow-blue-500/40 ring-4 ring-blue-500/20 group-hover:ring-blue-500/40 transition-all duration-500 group-hover:scale-110">
+                      <span className="group-hover:animate-bounce">2</span>
+                    </div>
+                    <div className="flex-1 group-hover:translate-x-2 transition-transform duration-300">
+                      <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-blue-300 font-playfair transition-colors duration-300">Week 3-6: Development & Testing</h3>
+                      <p className="text-gray-300 group-hover:text-gray-200 font-inter font-normal text-sm sm:text-base transition-colors duration-300">Implementation with regular check-ins, testing, and academic feedback integration.</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-indigo-600 to-indigo-800 rounded-full flex items-center justify-center text-white font-bold">3</div>
-                    <div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-white font-playfair">Week 7-8: Documentation & Presentation</h3>
-                      <p className="text-gray-300 font-inter font-normal text-sm sm:text-base">Complete documentation, final testing, and presentation-ready deliverables.</p>
+                  <div className="flex items-center gap-4 group">
+                    <div className="w-12 h-12 bg-gradient-to-br from-indigo-600 to-indigo-800 rounded-full flex items-center justify-center text-white font-bold shadow-2xl shadow-indigo-500/40 ring-4 ring-indigo-500/20 group-hover:ring-indigo-500/40 transition-all duration-500 group-hover:scale-110">
+                      <span className="group-hover:animate-bounce">3</span>
+                    </div>
+                    <div className="flex-1 group-hover:translate-x-2 transition-transform duration-300">
+                      <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-indigo-300 font-playfair transition-colors duration-300">Week 7-8: Documentation & Presentation</h3>
+                      <p className="text-gray-300 group-hover:text-gray-200 font-inter font-normal text-sm sm:text-base transition-colors duration-300">Complete documentation, final testing, and presentation-ready deliverables.</p>
                     </div>
                   </div>
                 </div>
