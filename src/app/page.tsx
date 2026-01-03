@@ -138,7 +138,7 @@ export default function Home() {
                 <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
               </div>
             </Link> */}
-            <Link href="/academic-projects" className="group bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-yellow-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/10 backdrop-blur-sm">
+            <Link href="/dsa" className="group bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-yellow-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/10 backdrop-blur-sm">
               <div className="bg-yellow-500/10 p-3 sm:p-4 rounded-xl w-fit mb-4 sm:mb-6 group-hover:bg-yellow-500/20 transition-colors duration-300">
                 <FaGraduationCap className="text-3xl sm:text-4xl text-yellow-400 group-hover:scale-110 transition-transform duration-300" />
               </div>

@@ -58,7 +58,7 @@ const Navbar = () => {
                     <Link href="/ml-ai" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-colors duration-200 font-inter font-normal text-sm">
                       ML/AI Interviews
                     </Link> */}
-                    <Link href="/academic-projects" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-colors duration-200 font-inter font-normal text-sm">
+                    <Link href="/dsa" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-colors duration-200 font-inter font-normal text-sm">
                       Data Structures & Algorithms
                     </Link>
                     <Link href="/e-learning" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-colors duration-200 font-inter font-normal text-sm">
@@ -113,7 +113,7 @@ const Navbar = () => {
                   <Link href="/ml-ai" onClick={closeMenu} className="block text-gray-300 hover:text-white text-lg transition-colors duration-200 font-inter font-normal">
                     ML/AI Interviews
                   </Link> */}
-                  <Link href="/academic-projects" onClick={closeMenu} className="block text-gray-300 hover:text-white text-lg transition-colors duration-200 font-inter font-normal">
+                  <Link href="/dsa" onClick={closeMenu} className="block text-gray-300 hover:text-white text-lg transition-colors duration-200 font-inter font-normal">
                     Data Structures & Algorithms
                   </Link>
                   <Link href="/e-learning" onClick={closeMenu} className="block text-gray-300 hover:text-white text-lg transition-colors duration-200 font-inter font-normal">

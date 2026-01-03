@@ -90,6 +90,15 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"], // You'll need to add this image
     creator: "@debugchaps", // Replace with your Twitter handle
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   robots: {
     index: true,
     follow: true,
