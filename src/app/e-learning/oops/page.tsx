@@ -3,11 +3,50 @@
 import { useState } from 'react';
 import Navbar from '../../../components/Navbar';
 import { FaGraduationCap, FaChevronDown, FaChevronRight, FaCode, FaCubes, FaShieldAlt, FaEye, FaSitemap, FaShapes, FaPlus, FaMinus, FaCheck, FaToggleOn, FaToggleOff, FaBookOpen, FaLightbulb, FaPuzzlePiece, FaCog, FaNetworkWired, FaDatabase, FaRocket, FaStar, FaTimes, FaBars } from 'react-icons/fa';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export default function OOPS() {
   const [expandedCards, setExpandedCards] = useState<{[key: string]: boolean}>({});
   const [completedTopics, setCompletedTopics] = useState<{[key: string]: boolean}>({});
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  // Function to render text with code blocks
+  const renderContent = (text: string) => {
+    const parts = text.split(/(```(?:java|javascript|python|cpp|csharp)?\n[\s\S]*?\n```)/g);
+
+    return parts.map((part, index) => {
+      if (part.startsWith('```')) {
+        // Extract language and code
+        const match = part.match(/```(\w+)?\n([\s\S]*?)\n```/);
+        if (match) {
+          const language = match[1] || 'java';
+          const code = match[2];
+          return (
+            <div key={index} className="my-4">
+              <SyntaxHighlighter
+                language={language}
+                style={vscDarkPlus}
+                customStyle={{
+                  margin: 0,
+                  borderRadius: '8px',
+                  fontSize: '14px',
+                }}
+              >
+                {code}
+              </SyntaxHighlighter>
+            </div>
+          );
+        }
+      }
+      // Regular text - preserve line breaks
+      return (
+        <span key={index} style={{ whiteSpace: 'pre-line' }}>
+          {part}
+        </span>
+      );
+    });
+  };
 
   const toggleCard = (topic: string) => {
     setExpandedCards(prev => ({
@@ -476,7 +515,7 @@ export default function OOPS() {
                     <div className="px-4 sm:px-6 pb-4 sm:pb-6 border-t border-gray-700/50">
                       <div className="pt-3 sm:pt-4">
                         <div className="text-gray-300 leading-relaxed mb-4 text-sm sm:text-base">
-                          {item.answer}
+                          {renderContent(item.answer)}
                         </div>
 
                         {/* Key Points */}
