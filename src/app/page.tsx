@@ -1,26 +1,26 @@
 import Navbar from '../components/Navbar';
 import Link from 'next/link';
-import { FaCode, FaMobileAlt, FaBrain, FaGraduationCap, FaRocket, FaCheckCircle, FaNodeJs, FaPython, FaDatabase, FaCloud, FaArrowRight, FaEnvelope, FaWhatsapp, FaLightbulb, FaClock, FaHandshake, FaTrophy } from 'react-icons/fa';
+import { FaCode, FaMobileAlt, FaBrain, FaGraduationCap, FaRocket, FaCheckCircle, FaNodeJs, FaPython, FaDatabase, FaCloud, FaArrowRight, FaEnvelope, FaWhatsapp, FaLightbulb, FaClock, FaHandshake, FaTrophy, FaBookOpen } from 'react-icons/fa';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Home",
-  description: "DebugChaps - Professional web development, mobile app development, and machine learning solutions. Transform your ideas into powerful digital experiences with cutting-edge technology.",
+  description: "DebugChaps - Comprehensive interview preparation platform for software engineering roles. Master coding interviews, system design, and technical skills with expert guidance.",
   keywords: [
-    "web development company",
-    "mobile app development",
-    "machine learning solutions",
-    "software development",
-    "React development",
-    "Next.js development",
-    "Node.js development",
-    "Python development",
-    "academic project help",
-    "full-stack development"
+    "interview preparation",
+    "coding interviews",
+    "system design interviews",
+    "technical interview prep",
+    "software engineering interviews",
+    "data structures algorithms",
+    "web development interviews",
+    "mobile development interviews",
+    "ML AI interviews",
+    "computer science fundamentals"
   ],
   openGraph: {
-    title: "DebugChaps - Modern Development Solutions",
-    description: "Professional web development, mobile app development, and machine learning solutions. Transform your ideas into powerful digital experiences.",
+    title: "DebugChaps - Interview Preparation Platform",
+    description: "Master your next technical interview with comprehensive preparation guides, practice questions, and expert tips.",
     url: "https://debugchaps.com",
     siteName: "DebugChaps",
     images: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         url: "/og-home.jpg",
         width: 1200,
         height: 630,
-        alt: "DebugChaps - Modern Development Solutions",
+        alt: "DebugChaps - Interview Preparation Platform",
       },
     ],
     locale: "en_US",
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "DebugChaps - Modern Development Solutions",
-    description: "Professional web development, mobile app development, and machine learning solutions.",
+    title: "DebugChaps - Interview Preparation Platform",
+    description: "Master your next technical interview with comprehensive preparation guides.",
     images: ["/og-home.jpg"],
   },
   alternates: {
@@ -61,25 +61,25 @@ export default function Home() {
             </h1>
             <div className="mb-4 sm:mb-6">
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-gray-200 leading-tight font-poppins px-2">
-                Building <span className="text-blue-400 font-semibold">Web</span>, <span className="text-green-400 font-semibold">Mobile</span> & <span className="text-purple-400 font-semibold">Machine Learning</span>
+                Master <span className="text-blue-400 font-semibold">Coding</span>, <span className="text-green-400 font-semibold">System Design</span> & <span className="text-purple-400 font-semibold">Technical Interviews</span>
               </h2>
               <div className="mt-2">
                 <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-mono text-blue-400 animate-typing font-roboto-mono">
-                  Applications
+                  Interview Preparation
                 </span>
               </div>
             </div>
             <p className="text-base sm:text-lg md:text-xl mb-8 sm:mb-12 text-gray-300 max-w-4xl mx-auto leading-relaxed font-inter font-light px-4">
-              End-to-end development solutions for real-world and academic use cases. Transform your ideas into powerful digital experiences with cutting-edge technology.
+              Comprehensive interview preparation platform for software engineering roles. Master data structures, algorithms, system design, and technical skills with expert guidance and practice questions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 px-4">
               <button className="w-full sm:w-auto group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 flex items-center justify-center gap-3 font-poppins text-sm sm:text-base">
                 <FaRocket className="group-hover:rotate-12 transition-transform duration-300" />
-                Request a Project
+                Start Preparing
               </button>
               <button className="w-full sm:w-auto group border-2 border-gray-400 hover:border-blue-400 text-gray-300 hover:text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-black/5 hover:bg-black/10 font-poppins text-sm sm:text-base">
                 <span className="flex items-center justify-center gap-2">
-                  Contact Us
+                  Explore Topics
                   <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
               </button>
@@ -96,23 +96,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Interview Preparation Areas Section */}
       <section id="services" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-gray-900 relative">
         <div className="absolute inset-0 bg-linear-to-b from-transparent via-gray-900/50"></div>
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent font-playfair px-2">Our Services</h2>
-            <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto font-inter font-light px-4">Comprehensive development solutions tailored to your needs</p>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent font-playfair px-2">Interview Preparation Areas</h2>
+            <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto font-inter font-light px-4">Master the key areas that matter most in technical interviews</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            <Link href="/web-development" className="group bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 backdrop-blur-sm">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+            {/* <Link href="/web-development" className="group bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 backdrop-blur-sm">
               <div className="bg-blue-500/10 p-3 sm:p-4 rounded-xl w-fit mb-4 sm:mb-6 group-hover:bg-blue-500/20 transition-colors duration-300">
                 <FaCode className="text-3xl sm:text-4xl text-blue-400 group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-blue-300 transition-colors duration-300 font-montserrat">Web Application Development</h3>
-              <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base mb-4">Modern, responsive web applications built with cutting-edge technologies and best practices.</p>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-blue-300 transition-colors duration-300 font-montserrat">Web Development Interviews</h3>
+              <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base mb-4">Master frontend and backend interview questions, frameworks, and best practices for web development roles.</p>
               <div className="flex items-center text-blue-600 group-hover:text-blue-300 transition-colors duration-300 font-inter font-medium text-sm">
-                Learn More
+                Start Learning
                 <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
               </div>
             </Link>
@@ -120,10 +120,10 @@ export default function Home() {
               <div className="bg-green-500/10 p-3 sm:p-4 rounded-xl w-fit mb-4 sm:mb-6 group-hover:bg-green-500/20 transition-colors duration-300">
                 <FaMobileAlt className="text-3xl sm:text-4xl text-green-400 group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-green-300 transition-colors duration-300 font-montserrat">Mobile Application Development</h3>
-              <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base mb-4">Cross-platform mobile apps for iOS and Android using React Native and modern frameworks.</p>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-green-300 transition-colors duration-300 font-montserrat">Mobile Development Interviews</h3>
+              <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base mb-4">Prepare for mobile app development interviews covering iOS, Android, React Native, and cross-platform frameworks.</p>
               <div className="flex items-center text-green-600 group-hover:text-green-300 transition-colors duration-300 font-inter font-medium text-sm">
-                Learn More
+                Start Learning
                 <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
               </div>
             </Link>
@@ -131,21 +131,32 @@ export default function Home() {
               <div className="bg-purple-500/10 p-3 sm:p-4 rounded-xl w-fit mb-4 sm:mb-6 group-hover:bg-purple-500/20 transition-colors duration-300">
                 <FaBrain className="text-3xl sm:text-4xl text-purple-400 group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-purple-300 transition-colors duration-300 font-montserrat">Machine Learning Solutions</h3>
-              <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base mb-4">AI-powered solutions for data analysis, prediction, and intelligent automation systems.</p>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-purple-300 transition-colors duration-300 font-montserrat">ML/AI Interviews</h3>
+              <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base mb-4">Ace machine learning and AI interviews with deep learning, algorithms, and practical problem-solving techniques.</p>
               <div className="flex items-center text-purple-600 group-hover:text-purple-300 transition-colors duration-300 font-inter font-medium text-sm">
-                Learn More
+                Start Learning
                 <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
               </div>
-            </Link>
+            </Link> */}
             <Link href="/academic-projects" className="group bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-yellow-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/10 backdrop-blur-sm">
               <div className="bg-yellow-500/10 p-3 sm:p-4 rounded-xl w-fit mb-4 sm:mb-6 group-hover:bg-yellow-500/20 transition-colors duration-300">
                 <FaGraduationCap className="text-3xl sm:text-4xl text-yellow-400 group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-yellow-300 transition-colors duration-300 font-montserrat">Academic Project Development</h3>
-              <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base mb-4">Comprehensive support for academic projects and research implementations with guidance.</p>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-yellow-300 transition-colors duration-300 font-montserrat">Data Structures & Algorithms</h3>
+              <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base mb-4">Master the fundamentals of DSA with comprehensive guides, coding problems, and interview-focused explanations.</p>
               <div className="flex items-center text-yellow-600 group-hover:text-yellow-300 transition-colors duration-300 font-inter font-medium text-sm">
-                Learn More
+                Start Learning
+                <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              </div>
+            </Link>
+            <Link href="/e-learning" className="group bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 backdrop-blur-sm">
+              <div className="bg-cyan-500/10 p-3 sm:p-4 rounded-xl w-fit mb-4 sm:mb-6 group-hover:bg-cyan-500/20 transition-colors duration-300">
+                <FaBookOpen className="text-3xl sm:text-4xl text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-cyan-300 transition-colors duration-300 font-montserrat">Core CS Fundamentals</h3>
+              <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base mb-4">Comprehensive CSE interview preparation with detailed Q&A guides for DBMS, OS, CN, OOPS, and System Design.</p>
+              <div className="flex items-center text-cyan-600 group-hover:text-cyan-300 transition-colors duration-300 font-inter font-medium text-sm">
+                Start Learning
                 <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
               </div>
             </Link>
@@ -153,13 +164,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How We Work Section */}
+      {/* How Interview Preparation Works Section */}
       <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-purple-900/20"></div>
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-montserrat px-2">How We Work</h2>
-            <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto font-poppins font-light px-4">Our streamlined process ensures quality and efficiency</p>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-montserrat px-2">How Interview Preparation Works</h2>
+            <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto font-poppins font-light px-4">Structured approach to master technical interviews</p>
           </div>
           <div className="relative">
             {/* Timeline line - hidden on mobile, visible on larger screens */}
@@ -173,8 +184,8 @@ export default function Home() {
                   <span className="group-hover:animate-bounce">1</span>
                 </div>
                 <div className="mt-4 lg:mt-24 bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 backdrop-blur-sm group-hover:bg-gradient-to-br group-hover:from-blue-900/10 group-hover:to-purple-900/10">
-                  <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-blue-300 font-playfair text-center lg:text-left transition-colors duration-300">Requirement Discussion</h3>
-                  <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base text-center lg:text-left group-hover:text-gray-300 transition-colors duration-300">We start by understanding your project requirements, goals, and vision in detail through comprehensive discussions.</p>
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-blue-300 font-playfair text-center lg:text-left transition-colors duration-300">Choose Your Focus Area</h3>
+                  <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base text-center lg:text-left group-hover:text-gray-300 transition-colors duration-300">Select the interview topics that align with your target roles and career goals from our comprehensive preparation areas.</p>
                 </div>
               </div>
 
@@ -183,8 +194,8 @@ export default function Home() {
                   <span className="group-hover:animate-bounce">2</span>
                 </div>
                 <div className="mt-4 lg:mt-24 bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-purple-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 backdrop-blur-sm group-hover:bg-gradient-to-br group-hover:from-purple-900/10 group-hover:to-pink-900/10">
-                  <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-purple-300 font-playfair text-center lg:text-left transition-colors duration-300">Planning & Architecture</h3>
-                  <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base text-center lg:text-left group-hover:text-gray-300 transition-colors duration-300">Design scalable architecture, create detailed project roadmap, and establish technical specifications.</p>
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-purple-300 font-playfair text-center lg:text-left transition-colors duration-300">Master Fundamentals</h3>
+                  <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base text-center lg:text-left group-hover:text-gray-300 transition-colors duration-300">Build strong foundations with in-depth guides, real-world examples, and clear explanations of core concepts.</p>
                 </div>
               </div>
 
@@ -193,8 +204,8 @@ export default function Home() {
                   <span className="group-hover:animate-bounce">3</span>
                 </div>
                 <div className="mt-4 lg:mt-24 bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-pink-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10 backdrop-blur-sm group-hover:bg-gradient-to-br group-hover:from-pink-900/10 group-hover:to-purple-900/10">
-                  <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-pink-300 font-playfair text-center lg:text-left transition-colors duration-300">Development & Testing</h3>
-                  <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base text-center lg:text-left group-hover:text-gray-300 transition-colors duration-300">Agile development with continuous integration, testing, and quality assurance throughout the process.</p>
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-pink-300 font-playfair text-center lg:text-left transition-colors duration-300">Practice & Problem Solving</h3>
+                  <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base text-center lg:text-left group-hover:text-gray-300 transition-colors duration-300">Apply your knowledge through coding challenges, system design problems, and interactive exercises.</p>
                 </div>
               </div>
 
@@ -203,8 +214,8 @@ export default function Home() {
                   <span className="group-hover:animate-bounce">4</span>
                 </div>
                 <div className="mt-4 lg:mt-24 bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-green-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10 backdrop-blur-sm group-hover:bg-gradient-to-br group-hover:from-green-900/10 group-hover:to-blue-900/10">
-                  <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-green-300 font-playfair text-center lg:text-left transition-colors duration-300">Delivery & Deployment Support</h3>
-                  <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base text-center lg:text-left group-hover:text-gray-300 transition-colors duration-300">Seamless deployment, comprehensive testing, and ongoing support for your production application.</p>
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-green-300 font-playfair text-center lg:text-left transition-colors duration-300">Mock Interviews & Assessment</h3>
+                  <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base text-center lg:text-left group-hover:text-gray-300 transition-colors duration-300">Practice with realistic interview scenarios, receive feedback, and track your progress towards interview success.</p>
                 </div>
               </div>
             </div>
@@ -212,13 +223,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose DebugChaps Section */}
+      {/* Why Our Interview Prep Works Section */}
       <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-blue-900/20"></div>
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-montserrat px-2">Why Choose DebugChaps</h2>
-            <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto font-poppins font-light px-4">What sets us apart in delivering exceptional development solutions</p>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-montserrat px-2">Why Our Interview Prep Works</h2>
+            <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto font-poppins font-light px-4">Proven strategies and comprehensive resources for interview success</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
             <div className="group flex items-start gap-4 sm:gap-6 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 hover:border-blue-500/30 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
@@ -226,8 +237,8 @@ export default function Home() {
                 <FaCode className="text-2xl sm:text-3xl text-blue-400" />
               </div>
               <div className="flex-1">
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors duration-300 font-playfair">Clean & Scalable Code</h3>
-                <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base">Well-structured, maintainable code that grows with your business and adapts to future requirements.</p>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors duration-300 font-playfair">Real-World Focus</h3>
+                <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base">Content based on actual interview experiences and industry requirements, not just theory.</p>
               </div>
             </div>
 
@@ -236,8 +247,8 @@ export default function Home() {
                 <FaRocket className="text-2xl sm:text-3xl text-green-400" />
               </div>
               <div className="flex-1">
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white group-hover:text-green-300 transition-colors duration-300 font-playfair">Modern Tech Stack</h3>
-                <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base">Latest technologies and frameworks ensuring optimal performance, security, and scalability.</p>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white group-hover:text-green-300 transition-colors duration-300 font-playfair">Structured Learning Path</h3>
+                <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base">Systematic approach from basics to advanced topics with clear progression and milestones.</p>
               </div>
             </div>
 
@@ -246,8 +257,8 @@ export default function Home() {
                 <FaLightbulb className="text-2xl sm:text-3xl text-purple-400" />
               </div>
               <div className="flex-1">
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white group-hover:text-purple-300 transition-colors duration-300 font-playfair">Industry-Standard Practices</h3>
-                <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base">Following best practices, design patterns, and security standards for robust applications.</p>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white group-hover:text-purple-300 transition-colors duration-300 font-playfair">Practical Problem Solving</h3>
+                <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base">Hands-on coding challenges and design problems that mirror real interview scenarios.</p>
               </div>
             </div>
 
@@ -256,8 +267,8 @@ export default function Home() {
                 <FaClock className="text-2xl sm:text-3xl text-yellow-400" />
               </div>
               <div className="flex-1">
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white group-hover:text-yellow-300 transition-colors duration-300 font-playfair">On-Time Delivery</h3>
-                <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base">Reliable timelines with milestone-based delivery and transparent project management.</p>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white group-hover:text-yellow-300 transition-colors duration-300 font-playfair">Self-Paced Learning</h3>
+                <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base">Learn at your own pace with flexible schedules and comprehensive progress tracking.</p>
               </div>
             </div>
 
@@ -266,8 +277,8 @@ export default function Home() {
                 <FaHandshake className="text-2xl sm:text-3xl text-pink-400" />
               </div>
               <div className="flex-1">
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white group-hover:text-pink-300 transition-colors duration-300 font-playfair">Clear Communication</h3>
-                <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base">Regular updates, transparent communication, and collaborative approach throughout development.</p>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white group-hover:text-pink-300 transition-colors duration-300 font-playfair">Expert Community</h3>
+                <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base">Connect with fellow learners and industry experts for support and networking opportunities.</p>
               </div>
             </div>
 
@@ -276,21 +287,21 @@ export default function Home() {
                 <FaTrophy className="text-2xl sm:text-3xl text-cyan-400" />
               </div>
               <div className="flex-1">
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white group-hover:text-cyan-300 transition-colors duration-300 font-playfair">Deployment Support</h3>
-                <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base">Full support from development to production deployment with monitoring and maintenance.</p>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white group-hover:text-cyan-300 transition-colors duration-300 font-playfair">Proven Success Rate</h3>
+                <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base">Thousands of successful interviews with our structured preparation methodology.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Tech Stack Section */}
+      {/* Key Interview Topics Section */}
       <section id="tech-stack" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black via-gray-900 to-black relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/10 via-transparent to-blue-900/10"></div>
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-montserrat px-2">Our Tech Stack</h2>
-            <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto font-poppins font-light px-4">Cutting-edge technologies we use to build exceptional solutions</p>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-montserrat px-2">Key Interview Topics</h2>
+            <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto font-poppins font-light px-4">Master the essential topics that appear in every technical interview</p>
           </div>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             <div className="group bg-gradient-to-br from-gray-900 to-gray-800 p-4 sm:p-6 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 transform hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/20 backdrop-blur-sm">
@@ -298,7 +309,7 @@ export default function Home() {
                 <div className="bg-blue-500/10 p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 group-hover:bg-blue-500/20 transition-colors duration-300">
                   <FaCode className="text-3xl sm:text-4xl text-blue-400" />
                 </div>
-                <span className="text-base sm:text-lg font-semibold text-white group-hover:text-blue-300 transition-colors duration-300 font-inter">Next.js</span>
+                <span className="text-base sm:text-lg font-semibold text-white group-hover:text-blue-300 transition-colors duration-300 font-inter">Data Structures</span>
               </div>
             </div>
 
@@ -307,7 +318,7 @@ export default function Home() {
                 <div className="bg-blue-500/10 p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 group-hover:bg-blue-500/20 transition-colors duration-300">
                   <FaCode className="text-3xl sm:text-4xl text-blue-400" />
                 </div>
-                <span className="text-base sm:text-lg font-semibold text-white group-hover:text-blue-300 transition-colors duration-300 font-inter">React</span>
+                <span className="text-base sm:text-lg font-semibold text-white group-hover:text-blue-300 transition-colors duration-300 font-inter">Algorithms</span>
               </div>
             </div>
 
@@ -316,7 +327,7 @@ export default function Home() {
                 <div className="bg-cyan-500/10 p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 group-hover:bg-cyan-500/20 transition-colors duration-300">
                   <FaCode className="text-3xl sm:text-4xl text-cyan-400" />
                 </div>
-                <span className="text-base sm:text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors duration-300 font-inter">Tailwind CSS</span>
+                <span className="text-base sm:text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors duration-300 font-inter">System Design</span>
               </div>
             </div>
 
@@ -325,7 +336,7 @@ export default function Home() {
                 <div className="bg-green-500/10 p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 group-hover:bg-green-500/20 transition-colors duration-300">
                   <FaMobileAlt className="text-3xl sm:text-4xl text-green-400" />
                 </div>
-                <span className="text-base sm:text-lg font-semibold text-white group-hover:text-green-300 transition-colors duration-300 font-inter">React Native</span>
+                <span className="text-base sm:text-lg font-semibold text-white group-hover:text-green-300 transition-colors duration-300 font-inter">Web Development</span>
               </div>
             </div>
 
@@ -334,7 +345,7 @@ export default function Home() {
                 <div className="bg-green-500/10 p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 group-hover:bg-green-500/20 transition-colors duration-300">
                   <FaNodeJs className="text-3xl sm:text-4xl text-green-400" />
                 </div>
-                <span className="text-base sm:text-lg font-semibold text-white group-hover:text-green-300 transition-colors duration-300 font-inter">Node.js</span>
+                <span className="text-base sm:text-lg font-semibold text-white group-hover:text-green-300 transition-colors duration-300 font-inter">Database Design</span>
               </div>
             </div>
 
@@ -343,7 +354,7 @@ export default function Home() {
                 <div className="bg-yellow-500/10 p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 group-hover:bg-yellow-500/20 transition-colors duration-300">
                   <FaPython className="text-3xl sm:text-4xl text-yellow-400" />
                 </div>
-                <span className="text-base sm:text-lg font-semibold text-white group-hover:text-yellow-300 transition-colors duration-300 font-inter">Python</span>
+                <span className="text-base sm:text-lg font-semibold text-white group-hover:text-yellow-300 transition-colors duration-300 font-inter">Programming Languages</span>
               </div>
             </div>
 
@@ -352,7 +363,7 @@ export default function Home() {
                 <div className="bg-purple-500/10 p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 group-hover:bg-purple-500/20 transition-colors duration-300">
                   <FaDatabase className="text-3xl sm:text-4xl text-purple-400" />
                 </div>
-                <span className="text-base sm:text-lg font-semibold text-white group-hover:text-purple-300 transition-colors duration-300 font-inter">MongoDB / MySQL</span>
+                <span className="text-base sm:text-lg font-semibold text-white group-hover:text-purple-300 transition-colors duration-300 font-inter">Operating Systems</span>
               </div>
             </div>
 
@@ -361,7 +372,7 @@ export default function Home() {
                 <div className="bg-blue-500/10 p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 group-hover:bg-blue-500/20 transition-colors duration-300">
                   <FaCloud className="text-3xl sm:text-4xl text-blue-400" />
                 </div>
-                <span className="text-base sm:text-lg font-semibold text-white group-hover:text-blue-300 transition-colors duration-300 font-inter">Cloud Deployment</span>
+                <span className="text-base sm:text-lg font-semibold text-white group-hover:text-blue-300 transition-colors duration-300 font-inter">Computer Networks</span>
               </div>
             </div>
           </div>
@@ -374,13 +385,13 @@ export default function Home() {
         <div className="relative max-w-5xl mx-auto text-center">
           <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700 rounded-3xl p-8 sm:p-12 md:p-16 shadow-2xl">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent font-montserrat px-2">
-              Have an idea or project in mind?
+              Ready to Ace Your Next Interview?
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 sm:mb-10 leading-relaxed font-poppins font-light px-4">
-              Let's bring it to life together. Transform your vision into reality.
+              Start your journey to interview success with our comprehensive preparation platform.
             </p>
             <button className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 flex items-center gap-3 mx-auto mb-6 sm:mb-8">
-              Get Started
+              Start Preparing
               <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
             </button>
             {/* <div className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-8 text-gray-400">

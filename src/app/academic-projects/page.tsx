@@ -1,363 +1,454 @@
-import Navbar from '../../components/Navbar';
-import { FaGraduationCap, FaCheckCircle, FaArrowRight, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
+'use client';
+
+import { useState } from 'react';
+import { FaGraduationCap, FaChevronDown, FaChevronRight, FaCode, FaLink, FaLayerGroup, FaList, FaTree, FaProjectDiagram, FaHashtag, FaBars, FaTimes } from 'react-icons/fa';
 
 export default function AcademicProjects() {
+  const [expandedCards, setExpandedCards] = useState<{[key: string]: boolean}>({});
+  const [completedTopics, setCompletedTopics] = useState<{[key: string]: boolean}>({});
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const toggleCard = (topic: string) => {
+    setExpandedCards(prev => ({
+      ...prev,
+      [topic]: !prev[topic]
+    }));
+  };
+
+  const toggleCompleted = (topic: string) => {
+    setCompletedTopics(prev => ({
+      ...prev,
+      [topic]: !prev[topic]
+    }));
+  };
+
+  const topics = [
+    { name: 'Arrays', icon: FaCode, content: 'Arrays are fundamental data structures that store elements of the same type in contiguous memory locations. They provide O(1) access time but have fixed size limitations.' },
+    { name: 'Linked Lists', icon: FaLink, content: 'Linked lists are dynamic data structures where elements are connected through pointers. They allow efficient insertions and deletions but have O(n) access time.' },
+    { name: 'Stack', icon: FaLayerGroup, content: 'Stacks follow LIFO (Last In, First Out) principle. They are used for function call management, expression evaluation, and undo mechanisms.' },
+    { name: 'Queue', icon: FaList, content: 'Queues follow FIFO (First In, First Out) principle. They are essential for scheduling, breadth-first search, and resource management.' },
+    { name: 'Trees', icon: FaTree, content: 'Trees are hierarchical data structures with a root node and child nodes. Binary trees, BSTs, and heaps are common implementations.' },
+    { name: 'Graphs', icon: FaProjectDiagram, content: 'Graphs represent relationships between entities. They consist of vertices and edges, used in social networks, maps, and dependency analysis.' },
+    { name: 'HashMap', icon: FaHashtag, content: 'HashMaps provide O(1) average time complexity for insertions, deletions, and lookups using hash functions to map keys to values.' }
+  ];
+
+  const completedCount = Object.values(completedTopics).filter(Boolean).length;
+  const progressPercentage = Math.round((completedCount / topics.length) * 100);
+
   return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
-      <Navbar />
+    <div className="min-h-screen bg-gradient-to-br from-[#0B0F14] to-[#0F172A] text-white">
+      {/* Mobile Menu Button */}
+      <div className="lg:hidden fixed top-20 left-4 z-50">
+        <button
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+          className="bg-cyan-600 hover:bg-cyan-700 text-white p-3 rounded-lg shadow-lg transition-colors duration-200"
+        >
+          {sidebarOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
+        </button>
+      </div>
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-black px-4">
-        <div className="absolute inset-0 bg-linear-to-r from-cyan-600/10 via-blue-600/10 to-indigo-600/10"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-blue-900/20 to-transparent"></div>
-        <div className="relative z-10 text-center max-w-6xl mx-auto w-full">
-          <div className="animate-fade-in-up">
-            <div className="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-cyan-600 to-cyan-800 rounded-full mb-6">
-              <FaGraduationCap className="text-4xl sm:text-5xl text-white" />
-            </div>
-            <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-4 sm:mb-6 bg-gradient-to-r from-white via-cyan-100 to-blue-200 bg-clip-text text-transparent font-montserrat leading-tight">
-              Academic Projects
-            </h1>
-            <div className="mb-4 sm:mb-6">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-gray-200 leading-tight font-poppins px-2">
-                Research-driven software solutions
-              </h2>
-              <div className="mt-2">
-                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-mono text-cyan-400 animate-typing font-roboto-mono">
-                  for academic excellence and innovation
-                </span>
-              </div>
-            </div>
-            <p className="text-base sm:text-lg md:text-xl mb-8 sm:mb-12 text-gray-300 max-w-4xl mx-auto leading-relaxed font-inter font-light px-4">
-              Transform your academic research into powerful software applications that demonstrate innovation, solve real problems, and showcase your technical expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 px-4">
-              <button className="w-full sm:w-auto group bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center justify-center gap-3 font-poppins text-sm sm:text-base">
-                <FaGraduationCap className="group-hover:rotate-12 transition-transform duration-300" />
-                Request a Project
-              </button>
-              <button className="w-full sm:w-auto group border-2 border-gray-400 hover:border-cyan-400 text-gray-300 hover:text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-black/5 hover:bg-black/10 font-poppins text-sm sm:text-base">
-                <span className="flex items-center justify-center gap-2">
-                  View Portfolio
-                  <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-gray-600 rounded-full flex justify-center">
-            <div className="w-1 h-2 sm:w-1 sm:h-3 bg-gray-600 rounded-full mt-1 sm:mt-2 animate-pulse"></div>
-          </div>
-        </div>
-      </section>
+      {/* Sidebar Overlay for Mobile */}
+      {sidebarOpen && (
+        <div className="lg:hidden fixed inset-0 z-40">
+          <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setSidebarOpen(false)}></div>
+          <div className="relative">
+            <div className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-cyan-500/20 shadow-2xl">
+              <div className="p-6">
+                {/* Close button */}
+                <button
+                  onClick={() => setSidebarOpen(false)}
+                  className="absolute top-4 right-4 text-gray-400 hover:text-white"
+                >
+                  <FaTimes size={20} />
+                </button>
 
-      {/* What We Build Section */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-900/20 via-transparent to-blue-900/20"></div>
-        <div className="relative max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-montserrat px-2">What We Build</h2>
-            <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto font-poppins font-light px-4">Comprehensive academic software solutions that advance research and education</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            <div className="group bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 backdrop-blur-sm">
-              <div className="bg-cyan-500/10 p-4 rounded-xl w-fit mb-6 group-hover:bg-cyan-500/20 transition-colors duration-300">
-                <FaGraduationCap className="text-4xl text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-cyan-300 transition-colors duration-300 font-playfair">Research Software</h3>
-              <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base mb-4">Custom software tools that support academic research, data analysis, and experimentation.</p>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-400 text-xs" />
-                  <span>Data analysis tools</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-400 text-xs" />
-                  <span>Simulation software</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-400 text-xs" />
-                  <span>Visualization platforms</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="group bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 backdrop-blur-sm">
-              <div className="bg-blue-500/10 p-4 rounded-xl w-fit mb-6 group-hover:bg-blue-500/20 transition-colors duration-300">
-                <FaGraduationCap className="text-4xl text-blue-400 group-hover:scale-110 transition-transform duration-300" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-blue-300 transition-colors duration-300 font-playfair">Educational Platforms</h3>
-              <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base mb-4">Interactive learning management systems and educational technology solutions.</p>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-400 text-xs" />
-                  <span>Learning management systems</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-400 text-xs" />
-                  <span>Assessment tools</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-400 text-xs" />
-                  <span>Student tracking</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="group bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-indigo-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/10 backdrop-blur-sm">
-              <div className="bg-indigo-500/10 p-4 rounded-xl w-fit mb-6 group-hover:bg-indigo-500/20 transition-colors duration-300">
-                <FaGraduationCap className="text-4xl text-indigo-400 group-hover:scale-110 transition-transform duration-300" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-indigo-300 transition-colors duration-300 font-playfair">Thesis Projects</h3>
-              <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base mb-4">Complete software implementations for academic theses and dissertations.</p>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-400 text-xs" />
-                  <span>Full-stack applications</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-400 text-xs" />
-                  <span>Research prototypes</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-400 text-xs" />
-                  <span>Experimental systems</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="group bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-purple-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 backdrop-blur-sm">
-              <div className="bg-purple-500/10 p-4 rounded-xl w-fit mb-6 group-hover:bg-purple-500/20 transition-colors duration-300">
-                <FaGraduationCap className="text-4xl text-purple-400 group-hover:scale-110 transition-transform duration-300" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-purple-300 transition-colors duration-300 font-playfair">Data Science Projects</h3>
-              <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base mb-4">Machine learning and data analysis projects for academic research and coursework.</p>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-400 text-xs" />
-                  <span>ML model development</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-400 text-xs" />
-                  <span>Data visualization</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-400 text-xs" />
-                  <span>Statistical analysis</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="group bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-pink-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10 backdrop-blur-sm">
-              <div className="bg-pink-500/10 p-4 rounded-xl w-fit mb-6 group-hover:bg-pink-500/20 transition-colors duration-300">
-                <FaGraduationCap className="text-4xl text-pink-400 group-hover:scale-110 transition-transform duration-300" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-pink-300 transition-colors duration-300 font-playfair">Capstone Projects</h3>
-              <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base mb-4">Comprehensive projects that demonstrate mastery of multiple technologies and concepts.</p>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-400 text-xs" />
-                  <span>Multi-disciplinary</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-400 text-xs" />
-                  <span>Real-world application</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-400 text-xs" />
-                  <span>Portfolio showcase</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="group bg-gradient-to-br from-gray-900 to-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-green-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10 backdrop-blur-sm">
-              <div className="bg-green-500/10 p-4 rounded-xl w-fit mb-6 group-hover:bg-green-500/20 transition-colors duration-300">
-                <FaGraduationCap className="text-4xl text-green-400 group-hover:scale-110 transition-transform duration-300" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-green-300 transition-colors duration-300 font-playfair">Research Publications</h3>
-              <p className="text-gray-400 leading-relaxed font-inter font-normal text-sm sm:text-base mb-4">Software that supports and enhances academic publishing and research dissemination.</p>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-400 text-xs" />
-                  <span>Paper visualization</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-400 text-xs" />
-                  <span>Collaboration tools</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-400 text-xs" />
-                  <span>Research databases</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Tech Stack Section */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-cyan-900/20"></div>
-        <div className="relative max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-montserrat px-2">Tech Stack</h2>
-            <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto font-poppins font-light px-4">Modern technologies we use to build academic software solutions</p>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6">
-            <div className="group bg-gradient-to-br from-gray-900 to-gray-800 p-4 sm:p-6 rounded-2xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-110 hover:shadow-2xl hover:shadow-cyan-500/20 backdrop-blur-sm text-center">
-              <div className="bg-cyan-500/10 p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 group-hover:bg-cyan-500/20 transition-colors duration-300 mx-auto w-fit">
-                <FaGraduationCap className="text-3xl sm:text-4xl text-cyan-400" />
-              </div>
-              <span className="text-sm sm:text-base font-semibold text-white group-hover:text-cyan-300 transition-colors duration-300 font-inter">Python</span>
-            </div>
-
-            <div className="group bg-gradient-to-br from-gray-900 to-gray-800 p-4 sm:p-6 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 transform hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/20 backdrop-blur-sm text-center">
-              <div className="bg-blue-500/10 p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 group-hover:bg-blue-500/20 transition-colors duration-300 mx-auto w-fit">
-                <FaGraduationCap className="text-3xl sm:text-4xl text-blue-400" />
-              </div>
-              <span className="text-sm sm:text-base font-semibold text-white group-hover:text-blue-300 transition-colors duration-300 font-inter">R</span>
-            </div>
-
-            <div className="group bg-gradient-to-br from-gray-900 to-gray-800 p-4 sm:p-6 rounded-2xl border border-gray-700 hover:border-indigo-500/50 transition-all duration-300 transform hover:scale-110 hover:shadow-2xl hover:shadow-indigo-500/20 backdrop-blur-sm text-center">
-              <div className="bg-indigo-500/10 p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 group-hover:bg-indigo-500/20 transition-colors duration-300 mx-auto w-fit">
-                <FaGraduationCap className="text-3xl sm:text-4xl text-indigo-400" />
-              </div>
-              <span className="text-sm sm:text-base font-semibold text-white group-hover:text-indigo-300 transition-colors duration-300 font-inter">MATLAB</span>
-            </div>
-
-            <div className="group bg-gradient-to-br from-gray-900 to-gray-800 p-4 sm:p-6 rounded-2xl border border-gray-700 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/20 backdrop-blur-sm text-center">
-              <div className="bg-purple-500/10 p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 group-hover:bg-purple-500/20 transition-colors duration-300 mx-auto w-fit">
-                <FaGraduationCap className="text-3xl sm:text-4xl text-purple-400" />
-              </div>
-              <span className="text-sm sm:text-base font-semibold text-white group-hover:text-purple-300 transition-colors duration-300 font-inter">Jupyter</span>
-            </div>
-
-            <div className="group bg-gradient-to-br from-gray-900 to-gray-800 p-4 sm:p-6 rounded-2xl border border-gray-700 hover:border-pink-500/50 transition-all duration-300 transform hover:scale-110 hover:shadow-2xl hover:shadow-pink-500/20 backdrop-blur-sm text-center">
-              <div className="bg-pink-500/10 p-3 sm:p-4 rounded-xl mb-3 sm:p-4 rounded-xl mb-3 sm:mb-4 group-hover:bg-pink-500/20 transition-colors duration-300 mx-auto w-fit">
-                <FaGraduationCap className="text-3xl sm:text-4xl text-pink-400" />
-              </div>
-              <span className="text-sm sm:text-base font-semibold text-white group-hover:text-pink-300 transition-colors duration-300 font-inter">TensorFlow</span>
-            </div>
-
-            <div className="group bg-gradient-to-br from-gray-900 to-gray-800 p-4 sm:p-6 rounded-2xl border border-gray-700 hover:border-green-500/50 transition-all duration-300 transform hover:scale-110 hover:shadow-2xl hover:shadow-green-500/20 backdrop-blur-sm text-center">
-              <div className="bg-green-500/10 p-3 sm:p-4 rounded-xl mb-3 sm:mb-4 group-hover:bg-green-500/20 transition-colors duration-300 mx-auto w-fit">
-                <FaGraduationCap className="text-3xl sm:text-4xl text-green-400" />
-              </div>
-              <span className="text-sm sm:text-base font-semibold text-white group-hover:text-green-300 transition-colors duration-300 font-inter">LaTeX</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Who It's For & Timeline */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-900/20 via-transparent to-blue-900/20"></div>
-        <div className="relative max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-montserrat">Who It's For</h2>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-500/20 hover:border-cyan-500/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 group">
-                    <div className="w-3 h-3 bg-cyan-400 rounded-full mt-2 flex-shrink-0 group-hover:animate-ping"></div>
-                    <div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-cyan-300 font-playfair mb-2 transition-colors duration-300">Undergraduate Students</h3>
-                      <p className="text-gray-300 group-hover:text-gray-200 font-inter font-normal text-sm sm:text-base transition-colors duration-300">Build impressive capstone projects and portfolio pieces that showcase your skills.</p>
-                    </div>
+                {/* Logo */}
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <FaGraduationCap className="text-white text-xl" />
                   </div>
-                  <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-blue-900/20 to-indigo-900/20 border border-blue-500/20 hover:border-blue-500/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 group">
-                    <div className="w-3 h-3 bg-blue-400 rounded-full mt-2 flex-shrink-0 group-hover:animate-ping"></div>
-                    <div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-blue-300 font-playfair mb-2 transition-colors duration-300">Graduate Students</h3>
-                      <p className="text-gray-300 group-hover:text-gray-200 font-inter font-normal text-sm sm:text-base transition-colors duration-300">Develop sophisticated research software and thesis implementations.</p>
-                    </div>
+                  <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                    DebugChaps
+                  </span>
+                </div>
+
+                {/* Progress Card */}
+                <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-4 mb-8 shadow-lg">
+                  <h3 className="text-sm font-semibold text-gray-300 mb-2">DSA Progress</h3>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-2xl font-bold text-cyan-400">{progressPercentage}%</span>
+                    <span className="text-sm text-gray-400">{completedCount}/{topics.length} completed</span>
                   </div>
-                  <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-indigo-900/20 to-purple-900/20 border border-indigo-500/20 hover:border-indigo-500/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/10 group">
-                    <div className="w-3 h-3 bg-indigo-400 rounded-full mt-2 flex-shrink-0 group-hover:animate-ping"></div>
-                    <div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-indigo-300 font-playfair mb-2 transition-colors duration-300">Researchers & Professors</h3>
-                      <p className="text-gray-300 group-hover:text-gray-200 font-inter font-normal text-sm sm:text-base transition-colors duration-300">Create tools that advance your research and support academic collaboration.</p>
-                    </div>
+                  <div className="w-full bg-gray-700 rounded-full h-2">
+                    <div
+                      className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full transition-all duration-500"
+                      style={{ width: `${progressPercentage}%` }}
+                    ></div>
                   </div>
                 </div>
-              </div>
-            </div>
 
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-montserrat">Timeline</h2>
-                <div className="space-y-6 relative">
-                  {/* Timeline line */}
-                  <div className="absolute left-6 top-6 bottom-6 w-1 bg-gradient-to-b from-cyan-500 via-blue-500 to-indigo-500 rounded-full shadow-lg shadow-cyan-500/20">
-                    <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/50 via-blue-500/50 to-indigo-500/50 rounded-full animate-pulse"></div>
-                  </div>
-                  <div className="flex items-center gap-4 group">
-                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-600 to-cyan-800 rounded-full flex items-center justify-center text-white font-bold shadow-2xl shadow-cyan-500/40 ring-4 ring-cyan-500/20 group-hover:ring-cyan-500/40 transition-all duration-500 group-hover:scale-110">
-                      <span className="group-hover:animate-bounce">1</span>
-                    </div>
-                    <div className="flex-1 group-hover:translate-x-2 transition-transform duration-300">
-                      <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-cyan-300 font-playfair transition-colors duration-300">Week 1-2: Requirements & Planning</h3>
-                      <p className="text-gray-300 group-hover:text-gray-200 font-inter font-normal text-sm sm:text-base transition-colors duration-300">Academic requirements analysis, project scope definition, and technical planning.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4 group">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center text-white font-bold shadow-2xl shadow-blue-500/40 ring-4 ring-blue-500/20 group-hover:ring-blue-500/40 transition-all duration-500 group-hover:scale-110">
-                      <span className="group-hover:animate-bounce">2</span>
-                    </div>
-                    <div className="flex-1 group-hover:translate-x-2 transition-transform duration-300">
-                      <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-blue-300 font-playfair transition-colors duration-300">Week 3-6: Development & Testing</h3>
-                      <p className="text-gray-300 group-hover:text-gray-200 font-inter font-normal text-sm sm:text-base transition-colors duration-300">Implementation with regular check-ins, testing, and academic feedback integration.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4 group">
-                    <div className="w-12 h-12 bg-gradient-to-br from-indigo-600 to-indigo-800 rounded-full flex items-center justify-center text-white font-bold shadow-2xl shadow-indigo-500/40 ring-4 ring-indigo-500/20 group-hover:ring-indigo-500/40 transition-all duration-500 group-hover:scale-110">
-                      <span className="group-hover:animate-bounce">3</span>
-                    </div>
-                    <div className="flex-1 group-hover:translate-x-2 transition-transform duration-300">
-                      <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-indigo-300 font-playfair transition-colors duration-300">Week 7-8: Documentation & Presentation</h3>
-                      <p className="text-gray-300 group-hover:text-gray-200 font-inter font-normal text-sm sm:text-base transition-colors duration-300">Complete documentation, final testing, and presentation-ready deliverables.</p>
-                    </div>
-                  </div>
-                </div>
+                {/* Navigation */}
+                <nav className="space-y-2">
+                  <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Topics</h3>
+                  {topics.map((topic) => {
+                    const Icon = topic.icon;
+                    const isCompleted = completedTopics[topic.name];
+                    return (
+                      <button
+                        key={topic.name}
+                        onClick={() => {
+                          document.getElementById(`topic-${topic.name}`)?.scrollIntoView({ behavior: 'smooth' });
+                          setSidebarOpen(false);
+                        }}
+                        className={`w-full flex items-center gap-3 p-3 rounded-lg transition-all duration-200 hover:bg-cyan-500/10 hover:border hover:border-cyan-500/30 ${
+                          isCompleted ? 'bg-green-500/10 border border-green-500/30' : 'bg-gray-900/30'
+                        }`}
+                      >
+                        <Icon className={`text-lg ${isCompleted ? 'text-green-400' : 'text-cyan-400'}`} />
+                        <span className={`text-sm font-medium ${isCompleted ? 'text-green-300' : 'text-gray-300'}`}>
+                          {topic.name}
+                        </span>
+                        {isCompleted && <div className="w-2 h-2 bg-green-400 rounded-full ml-auto"></div>}
+                      </button>
+                    );
+                  })}
+                </nav>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      )}
 
-      {/* CTA Section */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-900/20 via-blue-900/20 to-indigo-900/20"></div>
-        <div className="relative max-w-5xl mx-auto text-center">
-          <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700 rounded-3xl p-8 sm:p-12 md:p-16 shadow-2xl">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white via-cyan-100 to-blue-200 bg-clip-text text-transparent font-montserrat px-2">
-              Ready to Excel Academically?
-            </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 sm:mb-10 leading-relaxed font-poppins font-light px-4">
-              Let's build software that advances your academic goals and showcases your technical expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-8">
-              <button className="group bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center gap-3 mx-auto font-poppins">
-                <FaGraduationCap className="group-hover:rotate-12 transition-transform duration-300" />
-                Request a Project
-              </button>
+      <div className="flex">
+        {/* Desktop Sidebar */}
+        <div className="hidden lg:block fixed left-0 top-0 h-full w-80 bg-black/20 backdrop-blur-xl border-r border-cyan-500/20 shadow-2xl z-10">
+          <div className="p-6">
+            {/* Logo */}
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+                <FaGraduationCap className="text-white text-xl" />
+              </div>
+              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                DebugChaps
+              </span>
             </div>
-            {/* <div className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-8 text-gray-400">
-              <div className="flex items-center gap-3 hover:text-cyan-400 transition-colors duration-300">
-                <FaEnvelope className="text-xl sm:text-2xl" />
-                <span className="text-base sm:text-lg">rajeshbyreddy95@gmail.com</span>
+
+            {/* Progress Card */}
+            <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-4 mb-8 shadow-lg">
+              <h3 className="text-sm font-semibold text-gray-300 mb-2">DSA Progress</h3>
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-2xl font-bold text-cyan-400">{progressPercentage}%</span>
+                <span className="text-sm text-gray-400">{completedCount}/{topics.length} completed</span>
               </div>
-              <div className="flex items-center gap-3 hover:text-green-400 transition-colors duration-300">
-                <FaWhatsapp className="text-xl sm:text-2xl" />
-                <span className="text-base sm:text-lg">7075979652</span>
+              <div className="w-full bg-gray-700 rounded-full h-2">
+                <div
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full transition-all duration-500"
+                  style={{ width: `${progressPercentage}%` }}
+                ></div>
               </div>
-            </div> */}
+            </div>
+
+            {/* Navigation */}
+            <nav className="space-y-2">
+              <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Topics</h3>
+              {topics.map((topic) => {
+                const Icon = topic.icon;
+                const isCompleted = completedTopics[topic.name];
+                return (
+                  <button
+                    key={topic.name}
+                    onClick={() => document.getElementById(`topic-${topic.name}`)?.scrollIntoView({ behavior: 'smooth' })}
+                    className={`w-full flex items-center gap-3 p-3 rounded-lg transition-all duration-200 hover:bg-cyan-500/10 hover:border hover:border-cyan-500/30 ${
+                      isCompleted ? 'bg-green-500/10 border border-green-500/30' : 'bg-gray-900/30'
+                    }`}
+                  >
+                    <Icon className={`text-lg ${isCompleted ? 'text-green-400' : 'text-cyan-400'}`} />
+                    <span className={`text-sm font-medium ${isCompleted ? 'text-green-300' : 'text-gray-300'}`}>
+                      {topic.name}
+                    </span>
+                    {isCompleted && <div className="w-2 h-2 bg-green-400 rounded-full ml-auto"></div>}
+                  </button>
+                );
+              })}
+            </nav>
           </div>
         </div>
-      </section>
+
+        {/* Main Content */}
+        <div className="flex-1 lg:ml-80 p-4 lg:p-8">
+          <div className="max-w-4xl mx-auto">
+            {/* Header */}
+            <div className="mb-8 lg:mb-12">
+              <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-100 to-blue-200 bg-clip-text text-transparent">
+                Real-life Applications of Data Structures
+              </h1>
+              <p className="text-base lg:text-lg text-gray-400 leading-relaxed">
+                Explore how data structures power real-world applications and solve complex problems in software development.
+              </p>
+            </div>
+
+            {/* Progress Card */}
+            <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-4 mb-8 shadow-lg">
+              <h3 className="text-sm font-semibold text-gray-300 mb-2">DSA Progress</h3>
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-2xl font-bold text-cyan-400">{progressPercentage}%</span>
+                <span className="text-sm text-gray-400">{completedCount}/{topics.length} completed</span>
+              </div>
+              <div className="w-full bg-gray-700 rounded-full h-2">
+                <div
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full transition-all duration-500"
+                  style={{ width: `${progressPercentage}%` }}
+                ></div>
+              </div>
+            </div>
+
+            {/* Navigation */}
+            <nav className="space-y-2">
+              <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Topics</h3>
+              {topics.map((topic) => {
+                const Icon = topic.icon;
+                const isCompleted = completedTopics[topic.name];
+                return (
+                  <button
+                    key={topic.name}
+                    onClick={() => document.getElementById(`topic-${topic.name}`)?.scrollIntoView({ behavior: 'smooth' })}
+                    className={`w-full flex items-center gap-3 p-3 rounded-lg transition-all duration-200 hover:bg-cyan-500/10 hover:border hover:border-cyan-500/30 ${
+                      isCompleted ? 'bg-green-500/10 border border-green-500/30' : 'bg-gray-900/30'
+                    }`}
+                  >
+                    <Icon className={`text-lg ${isCompleted ? 'text-green-400' : 'text-cyan-400'}`} />
+                    <span className={`text-sm font-medium ${isCompleted ? 'text-green-300' : 'text-gray-300'}`}>
+                      {topic.name}
+                    </span>
+                    {isCompleted && <div className="w-2 h-2 bg-green-400 rounded-full ml-auto"></div>}
+                  </button>
+                );
+              })}
+            </nav>
+          </div>
+        </div>
+
+        {/* Main Content */}
+        <div className="flex-1 lg:ml-80 p-4 lg:p-8">
+          <div className="max-w-4xl mx-auto">
+            {/* Header */}
+            <div className="mb-8 lg:mb-12">
+              <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-100 to-blue-200 bg-clip-text text-transparent">
+                Real-life Applications of Data Structures
+              </h1>
+              <p className="text-base lg:text-lg text-gray-400 leading-relaxed">
+                Explore how data structures power real-world applications and solve complex problems in software development.
+              </p>
+            </div>
+
+            {/* Progress Card */}
+            <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-4 mb-8 shadow-lg">
+              <h3 className="text-sm font-semibold text-gray-300 mb-2">DSA Progress</h3>
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-2xl font-bold text-cyan-400">{progressPercentage}%</span>
+                <span className="text-sm text-gray-400">{completedCount}/{topics.length} completed</span>
+              </div>
+              <div className="w-full bg-gray-700 rounded-full h-2">
+                <div
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full transition-all duration-500"
+                  style={{ width: `${progressPercentage}%` }}
+                ></div>
+              </div>
+            </div>
+
+            {/* Accordion Cards */}
+            <div className="space-y-4">
+              {topics.map((topic) => {
+                const Icon = topic.icon;
+                const isExpanded = expandedCards[topic.name];
+                const isCompleted = completedTopics[topic.name];
+
+                return (
+                  <div
+                    key={topic.name}
+                    id={`topic-${topic.name}`}
+                    className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl shadow-lg hover:shadow-cyan-500/10 transition-all duration-300 hover:border-cyan-500/30"
+                  >
+                    <div
+                      className="flex flex-col sm:flex-row sm:items-center justify-between p-4 sm:p-6 cursor-pointer"
+                      onClick={() => toggleCard(topic.name)}
+                    >
+                      <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-0">
+                        <div className={`p-2 sm:p-3 rounded-lg ${isCompleted ? 'bg-green-500/20' : 'bg-cyan-500/20'}`}>
+                          <Icon className={`text-xl sm:text-2xl ${isCompleted ? 'text-green-400' : 'text-cyan-400'}`} />
+                        </div>
+                        <div>
+                          <h3 className={`text-lg sm:text-xl font-semibold ${isCompleted ? 'text-green-300' : 'text-white'}`}>
+                            {topic.name}
+                          </h3>
+                          <p className="text-gray-400 text-sm">Click to explore applications</p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center justify-between sm:justify-end gap-4">
+                        {/* Toggle Switch */}
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm text-gray-400">Done</span>
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              toggleCompleted(topic.name);
+                            }}
+                            className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 ${
+                              isCompleted ? 'bg-green-500' : 'bg-gray-600'
+                            }`}
+                          >
+                            <span
+                              className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-200 ${
+                                isCompleted ? 'translate-x-6' : 'translate-x-1'
+                              }`}
+                            />
+                          </button>
+                        </div>
+
+                        {isExpanded ? (
+                          <FaChevronDown className="text-cyan-400 text-lg" />
+                        ) : (
+                          <FaChevronRight className="text-cyan-400 text-lg" />
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Expanded Content */}
+                    {isExpanded && (
+                      <div className="px-6 pb-6 border-t border-gray-700/50">
+                        <div className="pt-4">
+                          <p className="text-gray-300 leading-relaxed mb-4">
+                            {topic.content}
+                          </p>
+
+                          {/* Real-world applications */}
+                          <div className="bg-black/20 rounded-lg p-4 border border-gray-600/30">
+                            <h4 className="text-lg font-semibold text-cyan-400 mb-3">Real-world Applications:</h4>
+                            <ul className="space-y-2 text-gray-300">
+                              {topic.name === 'Arrays' && (
+                                <>
+                                  <li className="flex items-start gap-2">
+                                    <span className="text-cyan-400 mt-1">•</span>
+                                    <span>Image processing and pixel manipulation in graphics software</span>
+                                  </li>
+                                  <li className="flex items-start gap-2">
+                                    <span className="text-cyan-400 mt-1">•</span>
+                                    <span>Database record storage and retrieval systems</span>
+                                  </li>
+                                  <li className="flex items-start gap-2">
+                                    <span className="text-cyan-400 mt-1">•</span>
+                                    <span>Audio processing and signal manipulation</span>
+                                  </li>
+                                </>
+                              )}
+                              {topic.name === 'Linked Lists' && (
+                                <>
+                                  <li className="flex items-start gap-2">
+                                    <span className="text-cyan-400 mt-1">•</span>
+                                    <span>Memory management in operating systems</span>
+                                  </li>
+                                  <li className="flex items-start gap-2">
+                                    <span className="text-cyan-400 mt-1">•</span>
+                                    <span>Implementation of undo functionality in text editors</span>
+                                  </li>
+                                  <li className="flex items-start gap-2">
+                                    <span className="text-cyan-400 mt-1">•</span>
+                                    <span>Symbol table management in compilers</span>
+                                  </li>
+                                </>
+                              )}
+                              {topic.name === 'Stack' && (
+                                <>
+                                  <li className="flex items-start gap-2">
+                                    <span className="text-cyan-400 mt-1">•</span>
+                                    <span>Function call stack in programming languages</span>
+                                  </li>
+                                  <li className="flex items-start gap-2">
+                                    <span className="text-cyan-400 mt-1">•</span>
+                                    <span>Expression evaluation and syntax parsing</span>
+                                  </li>
+                                  <li className="flex items-start gap-2">
+                                    <span className="text-cyan-400 mt-1">•</span>
+                                    <span>Browser back button functionality</span>
+                                  </li>
+                                </>
+                              )}
+                              {topic.name === 'Queue' && (
+                                <>
+                                  <li className="flex items-start gap-2">
+                                    <span className="text-cyan-400 mt-1">•</span>
+                                    <span>Print job scheduling in operating systems</span>
+                                  </li>
+                                  <li className="flex items-start gap-2">
+                                    <span className="text-cyan-400 mt-1">•</span>
+                                    <span>Breadth-first search algorithms</span>
+                                  </li>
+                                  <li className="flex items-start gap-2">
+                                    <span className="text-cyan-400 mt-1">•</span>
+                                    <span>Message queues in distributed systems</span>
+                                  </li>
+                                </>
+                              )}
+                              {topic.name === 'Trees' && (
+                                <>
+                                  <li className="flex items-start gap-2">
+                                    <span className="text-cyan-400 mt-1">•</span>
+                                    <span>File system organization</span>
+                                  </li>
+                                  <li className="flex items-start gap-2">
+                                    <span className="text-cyan-400 mt-1">•</span>
+                                    <span>Database indexing (B-trees)</span>
+                                  </li>
+                                  <li className="flex items-start gap-2">
+                                    <span className="text-cyan-400 mt-1">•</span>
+                                    <span>Decision trees in machine learning</span>
+                                  </li>
+                                </>
+                              )}
+                              {topic.name === 'Graphs' && (
+                                <>
+                                  <li className="flex items-start gap-2">
+                                    <span className="text-cyan-400 mt-1">•</span>
+                                    <span>Social network analysis</span>
+                                  </li>
+                                  <li className="flex items-start gap-2">
+                                    <span className="text-cyan-400 mt-1">•</span>
+                                    <span>GPS and navigation systems</span>
+                                  </li>
+                                  <li className="flex items-start gap-2">
+                                    <span className="text-cyan-400 mt-1">•</span>
+                                    <span>Dependency resolution in package managers</span>
+                                  </li>
+                                </>
+                              )}
+                              {topic.name === 'HashMap' && (
+                                <>
+                                  <li className="flex items-start gap-2">
+                                    <span className="text-cyan-400 mt-1">•</span>
+                                    <span>Database indexing and caching</span>
+                                  </li>
+                                  <li className="flex items-start gap-2">
+                                    <span className="text-cyan-400 mt-1">•</span>
+                                    <span>Symbol tables in compilers</span>
+                                  </li>
+                                  <li className="flex items-start gap-2">
+                                    <span className="text-cyan-400 mt-1">•</span>
+                                    <span>Associative arrays and dictionaries</span>
+                                  </li>
+                                </>
+                              )}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

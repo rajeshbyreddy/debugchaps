@@ -42,34 +42,34 @@ const Navbar = () => {
               </Link>
               <div className="relative group">
                 <button className="text-gray-300 hover:text-white transition-colors duration-200 font-inter font-normal flex items-center gap-1">
-                  Services
+                  Interview Preparation
                   <svg className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
                 <div className="absolute top-full left-0 mt-2 w-64 bg-gray-900/95 backdrop-blur-md rounded-lg border border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-xl">
                   <div className="py-2">
-                    <Link href="/web-development" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-colors duration-200 font-inter font-normal text-sm">
-                      Web Development
+                    {/* <Link href="/web-development" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-colors duration-200 font-inter font-normal text-sm">
+                      Web Development Interviews
                     </Link>
                     <Link href="/mobile-development" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-colors duration-200 font-inter font-normal text-sm">
-                      Mobile Development
+                      Mobile Development Interviews
                     </Link>
                     <Link href="/ml-ai" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-colors duration-200 font-inter font-normal text-sm">
-                      ML/AI Solutions
-                    </Link>
+                      ML/AI Interviews
+                    </Link> */}
                     <Link href="/academic-projects" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-colors duration-200 font-inter font-normal text-sm">
-                      Academic Projects
+                      Data Structures & Algorithms
                     </Link>
                     <Link href="/e-learning" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-colors duration-200 font-inter font-normal text-sm">
-                      E-Learning
+                      Core CS Fundamentals
                     </Link>
                   </div>
                 </div>
               </div>
              
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200 font-inter font-normal">
-                Request a Project
+                Start Preparing
               </button>
             </div>
 
@@ -103,28 +103,28 @@ const Navbar = () => {
                   Home
                 </Link>
                 <div className="space-y-4">
-                  <div className="text-gray-400 text-sm font-semibold uppercase tracking-wider mb-2">Services</div>
-                  <Link href="/web-development" onClick={closeMenu} className="block text-gray-300 hover:text-white text-lg transition-colors duration-200 font-inter font-normal">
-                    Web Development
+                  <div className="text-gray-400 text-sm font-semibold uppercase tracking-wider mb-2">Interview Preparation</div>
+                  {/* <Link href="/web-development" onClick={closeMenu} className="block text-gray-300 hover:text-white text-lg transition-colors duration-200 font-inter font-normal">
+                    Web Development Interviews
                   </Link>
                   <Link href="/mobile-development" onClick={closeMenu} className="block text-gray-300 hover:text-white text-lg transition-colors duration-200 font-inter font-normal">
-                    Mobile Development
+                    Mobile Development Interviews
                   </Link>
                   <Link href="/ml-ai" onClick={closeMenu} className="block text-gray-300 hover:text-white text-lg transition-colors duration-200 font-inter font-normal">
-                    ML/AI Solutions
-                  </Link>
+                    ML/AI Interviews
+                  </Link> */}
                   <Link href="/academic-projects" onClick={closeMenu} className="block text-gray-300 hover:text-white text-lg transition-colors duration-200 font-inter font-normal">
-                    Academic Projects
+                    Data Structures & Algorithms
                   </Link>
                   <Link href="/e-learning" onClick={closeMenu} className="block text-gray-300 hover:text-white text-lg transition-colors duration-200 font-inter font-normal">
-                    E-Learning
+                    Core CS Fundamentals
                   </Link>
                 </div>
                 <a href="#contact" onClick={closeMenu} className="text-gray-300 hover:text-white text-xl transition-colors duration-200 font-inter font-normal">
                   Contact
                 </a>
                 <button onClick={closeMenu} className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-200 mt-4 font-inter font-normal">
-                  Request a Project
+                  Start Preparing
                 </button>
               </div>
             </div>

@@ -106,7 +106,7 @@ export default function ELearning() {
               <span className="text-white font-medium">Interview Preparation</span>
             </div>
 
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent font-montserrat leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent font-montserrat leading-tight">
               Master CS Fundamentals
             </h1>
 
@@ -124,7 +124,7 @@ export default function ELearning() {
       </section>
 
       {/* Subjects Grid */}
-      <section className="py-20 px-0 sm:px-6 lg:px-8 bg-black relative">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black relative">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-playfair">
@@ -135,13 +135,13 @@ export default function ELearning() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {subjects.map((subject, index) => {
               const IconComponent = subject.icon;
               return (
                 <div
                   key={subject.id}
-                  className="group bg-gray-900 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 border border-gray-700 overflow-hidden relative"
+                  className="group bg-gray-900 rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 border border-gray-700 overflow-hidden relative"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {/* Background Pattern */}
@@ -179,7 +179,7 @@ export default function ELearning() {
 
                     <Link
                       href={`/e-learning/${subject.id}`}
-                      className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/25"
+                      className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-xl font-semibold transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/25"
                     >
                       View Questions
                       <FaRocket className="group-hover:translate-x-1 transition-transform" />
@@ -204,7 +204,7 @@ export default function ELearning() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center group">
               <div className="bg-gradient-to-br from-blue-500 to-blue-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                 <FaQuestionCircle className="text-3xl text-white" />

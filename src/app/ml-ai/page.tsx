@@ -16,15 +16,15 @@ export default function MLAI() {
               <FaBrain className="text-4xl sm:text-5xl text-white" />
             </div>
             <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-4 sm:mb-6 text-white bg-clip-text text-transparent font-montserrat leading-tight">
-              ML/AI Solutions
+              ML/AI Interviews
             </h1>
             <div className="mb-4 sm:mb-6">
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-gray-200 leading-tight font-poppins px-2">
-                Intelligent systems and data-driven insights
+                Ace machine learning and AI interviews
               </h2>
               <div className="mt-2">
                 <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-mono text-purple-400 animate-typing font-roboto-mono">
-                  powered by cutting-edge machine learning
+                  algorithms, deep learning, and data science
                 </span>
               </div>
             </div>
